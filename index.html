@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>stretched OMAGNA INK SHANOUKVILLE</title>
+  <title>OMAGNA INK SHANOUKVILLE</title>
 
   <!-- Google Fonts: Montserrat -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -39,14 +39,12 @@
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
       display: flex;
-      /* REVISI: Mengembalikan hukum fisika 'flex-start' untuk mencegah logo terpotong. */
       align-items: flex-start;
       justify-content: center;
-      /* REVISI FINAL: Padding atas diminimalkan untuk posisi logo paling tinggi. */
-      padding: 10px 16px 40px;
+      /* REVISI: Padding atas diatur menjadi 0 untuk posisi paling atas */
+      padding: 0 16px 40px;
       min-height: 100vh;
       position: relative;
-      /* PENYEMPURNAAN: Menggunakan CSS untuk stabilitas scroll, lebih efisien daripada JS. */
       overscroll-behavior: contain;
     }
 
@@ -85,6 +83,8 @@
       max-width: var(--safe-max);
       margin: 0 auto;
       text-align: center;
+      /* REVISI: Padding atas ditambahkan agar konten tidak menempel ke tepi */
+      padding-top: 10px;
     }
 
     /* Logo */
