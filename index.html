@@ -2,302 +2,449 @@
 <html lang="id">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>T OMAGNA INK SIHANOUKVILLE - Landing</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GO Omagna Ink Sihanoukville - Landing Page</title>
 
-  <!-- Montserrat -->
+  <!-- Google Fonts: Montserrat -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 
   <style>
-    :root{
+    :root {
       --omagna-blue: #0d2c54; /* primary navy */
       --omagna-blue-dark: #0b2644; /* darker tone */
       --bg-color: #f6f7f8;
-      --btn-height: 80px;
+      /* PENYESUAIAN BERDASARKAN BRIEF DESAIN */
+      --btn-height: 74px;
       --btn-radius: 18px;
-      --left-width: 110px;
-      --icon-circle: 70px;
+      --left-width: 94px;
+      --icon-circle: 58px;
       --safe-max: 520px;
     }
-    *{box-sizing:border-box;margin:0;padding:0}
-    html,body{height:100%}
-    body{
-      font-family: 'Montserrat', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
-      background-color:var(--bg-color);
-      -webkit-font-smoothing:antialiased;
-      -moz-osx-font-smoothing:grayscale;
-      display:flex;align-items:center;justify-content:center;padding:20px 16px;min-height:100vh;
-      position: relative;
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
 
-    /* Background layer - positioned exactly as in reference */
-    .bg-layer{
-      position:fixed;
-      top:0;
-      left:0;
-      width:100%;
-      height:100%;
-      z-index:0;
-      background-image:url('https://raw.githubusercontent.com/hantupota/OMAGNA-INK-SIHANOUKVILLE/refs/heads/main/OMAGNALP/bg2.png');
-      background-repeat:no-repeat;
+    html,
+    body {
+      height: 100%;
+    }
+
+    body {
+      font-family: 'Montserrat', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      background-color: var(--bg-color);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px 16px;
+      min-height: 100vh;
+      position: relative;
+      /* PENYEMPURNAAN: Mencegah 'scroll bleed' di mobile dengan CSS, lebih modern daripada JS. */
+      overscroll-behavior: contain;
+    }
+
+    /* Lapisan Latar Belakang */
+    .bg-layer {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+      background-image: url('https://raw.githubusercontent.com/hantupota/OMAGNA-INK-SIHANOUKVILLE/refs/heads/main/OMAGNALP/bg2.png');
+      background-repeat: no-repeat;
       background-position: top center;
       background-size: contain;
-      pointer-events:none;
+      pointer-events: none;
     }
 
-    /* Gradient overlay to match the reference visual effect */
-    .gradient-overlay{
-      position:fixed;
-      top:0;
-      left:0;
-      width:100%;
-      height:100%;
-      z-index:1;
-      background: linear-gradient(to bottom, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0.2) 40%, rgba(255,255,255,0.1) 100%);
-      pointer-events:none;
+    /* Overlay Gradien */
+    .gradient-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      background: linear-gradient(to bottom, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0.2) 40%, rgba(255, 255, 255, 0.1) 100%);
+      pointer-events: none;
     }
 
-    /* Main wrapper for content */
-    .wrap{position:relative;z-index:10;width:100%;max-width:var(--safe-max);margin:0 auto;text-align:center}
-
-    /* Logo - Posisi di atas teks sesuai gambar referensi */
-    .logo{
-      margin-top: 15px; /* Margin top kecil */
-      margin-bottom: 15px; /* Gap ke judul sekitar 15px */
-      filter: drop-shadow(0 4px 8px rgba(0,0,0,0.1));
+    /* Pembungkus Konten Utama */
+    .wrap {
+      position: relative;
+      z-index: 10;
+      width: 100%;
+      max-width: var(--safe-max);
+      margin: 0 auto;
+      text-align: center;
     }
-    .logo img{
-      width: 300px; /* Ukuran dikurangi dari 360px */
+
+    /* Logo */
+    .logo {
+      margin-top: 10px;
+      margin-bottom: 25px;
+      filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
+    }
+
+    .logo img {
+      width: 320px; /* PENYESUAIAN: Ukuran logo disesuaikan */
       max-width: 85%;
-      display:block;
-      margin:0 auto;
+      height: auto; /* PENYEMPURNAAN: Menjaga rasio aspek gambar */
+      display: block;
+      margin: 0 auto;
       transition: transform 0.3s ease;
     }
-    .logo img:hover{
+
+    .logo img:hover {
       transform: scale(1.02);
     }
 
-    .welcome-sm{
-      font-size:18px;
-      color:#606060;
-      letter-spacing:1.5px;
-      margin-bottom:5px; /* Dikurangi untuk mendekatkan dengan logo */
-      font-weight:600;
-      text-shadow: 0 1px 2px rgba(0,0,0,0.05);
-    }
-    .title{
-      font-size:32px;
-      font-weight:800;
-      color:#0b0b0b;
-      letter-spacing:2px;
-      text-transform:uppercase;
-      margin-bottom:30px;
-      line-height:1.2;
-      text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    .welcome-sm {
+      font-size: 18px;
+      color: #606060;
+      letter-spacing: 1.5px;
+      margin-bottom: 10px;
+      font-weight: 600;
+      text-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
     }
 
-    /* Buttons container */
-    .btns{display:flex;flex-direction:column;gap:18px;margin-top:10px;padding:0 10px}
-
-    /* Generic link style (reset) */
-    a.link{display:flex;align-items:stretch;height:var(--btn-height);border-radius:var(--btn-radius);position:relative;text-decoration:none;min-width:100%;transition:transform 120ms ease}
-
-    /* Neumorphic left capsule - Diperlebar untuk ikon yang lebih besar */
-    .left{
-      width:var(--left-width);min-width:var(--left-width);background:linear-gradient(180deg,#ffffff,#f0f2f5);
-      border-top-left-radius:var(--btn-radius);border-bottom-left-radius:var(--btn-radius);
-      display:flex;align-items:center;justify-content:center;position:relative;z-index:3;
-      box-shadow: 10px 14px 22px rgba(6,34,66,0.06), -6px -6px 14px rgba(255,255,255,0.9);
+    .title {
+      font-size: 32px;
+      font-weight: 800;
+      color: #0b0b0b;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 30px;
+      line-height: 1.2;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     }
 
-    /* inset circle for icon - Diperbesar dan diperjelas */
-    .icon-circle{
-      width:var(--icon-circle);height:var(--icon-circle);border-radius:50%;
-      background:linear-gradient(180deg,#f8fafc,#eef3f7);
-      display:flex;align-items:center;justify-content:center;
-      box-shadow:inset 4px 6px 10px rgba(6,34,66,0.08), inset -6px -6px 12px rgba(255,255,255,0.95);
+    /* Kontainer Tombol */
+    .btns {
+      display: flex;
+      flex-direction: column;
+      gap: 20px; /* PENYESUAIAN BERDASARKAN BRIEF DESAIN */
+      margin-top: 10px;
+      padding: 0 10px;
+    }
+
+    /* Gaya tautan generik */
+    a.link {
+      display: flex;
+      align-items: stretch;
+      height: var(--btn-height);
+      border-radius: var(--btn-radius);
+      position: relative;
+      text-decoration: none;
+      min-width: 100%;
+      transition: transform 120ms ease;
+    }
+    
+    /* Kapsul kiri */
+    .left {
+      width: var(--left-width);
+      min-width: var(--left-width);
+      background: linear-gradient(180deg, #ffffff, #f0f2f5);
+      border-top-left-radius: var(--btn-radius);
+      border-bottom-left-radius: var(--btn-radius);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      z-index: 3;
+      box-shadow: 10px 14px 22px rgba(6, 34, 66, 0.06), -6px -6px 14px rgba(255, 255, 255, 0.9);
+    }
+    
+    /* Lingkaran ikon */
+    .icon-circle {
+      width: var(--icon-circle);
+      height: var(--icon-circle);
+      border-radius: 50%;
+      background: linear-gradient(180deg, #f8fafc, #eef3f7);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      /* PENYESUAIAN BERDASARKAN BRIEF DESAIN: Shadow inset yang lebih halus */
+      box-shadow: inset 4px 6px 10px rgba(6,34,66,0.06), inset -6px -6px 12px rgba(255,255,255,0.95);
       transition: all 0.3s ease;
     }
-    .icon-circle img{
-      width:42px;height:42px;object-fit:contain;
-      filter: drop-shadow(0 2px 3px rgba(0,0,0,0.1));
+
+    .icon-circle img {
+      /* PENYESUAIAN BERDASARKAN BRIEF DESAIN: Ukuran ikon disesuaikan */
+      width: 38px;
+      height: 38px;
+      object-fit: contain;
+      filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.1));
     }
-    a.link:hover .icon-circle{
-      box-shadow:inset 4px 6px 10px rgba(6,34,66,0.12), inset -6px -6px 12px rgba(255,255,255,0.95);
+
+    a.link:hover .icon-circle {
+      box-shadow: inset 4px 6px 10px rgba(6, 34, 66, 0.12), inset -6px -6px 12px rgba(255, 255, 255, 0.95);
       transform: scale(1.05);
     }
 
-    /* Dark CTA panel */
-    .right{
-      flex:1;background:linear-gradient(180deg,var(--omagna-blue),var(--omagna-blue-dark));border-top-right-radius:var(--btn-radius);border-bottom-right-radius:var(--btn-radius);
-      display:flex;align-items:center;padding-left:30px;padding-right:20px;position:relative;color:#fff;font-weight:700;letter-spacing:1px;text-transform:uppercase;font-size:16px;z-index:2;box-shadow: 0 8px 0 rgba(6,34,66,0.44);
+    /* Panel CTA kanan */
+    .right {
+      flex: 1;
+      background: linear-gradient(180deg, var(--omagna-blue), var(--omagna-blue-dark));
+      border-top-right-radius: var(--btn-radius);
+      border-bottom-right-radius: var(--btn-radius);
+      display: flex;
+      align-items: center;
+      padding-left: 30px;
+      padding-right: 20px;
+      position: relative;
+      color: #fff;
+      font-weight: 700;
+      /* PENYESUAIAN BERDASARKAN BRIEF DESAIN */
+      letter-spacing: 1.6px;
+      text-transform: uppercase;
+      font-size: 15px; /* Disesuaikan agar pas dalam tombol yang lebih pendek */
+      z-index: 2;
+      box-shadow: 0 8px 0 rgba(6, 34, 66, 0.44);
+      /* PENYEMPURNAAN: Transisi dipindahkan ke sini untuk efek hover yang lebih halus */
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
-    .right span{z-index:6;text-shadow: 0 1px 2px rgba(0,0,0,0.2);}
 
-    /* Diagonal wedge pseudo element to cut into white left area */
-    .right::before{content:'';position:absolute;left:-46px;top:0;height:100%;width:66px;background:linear-gradient(180deg,var(--omagna-blue),var(--omagna-blue-dark));transform:skewX(-22deg);z-index:4;border-top-left-radius:6px;border-bottom-left-radius:6px}
+    .right span {
+      z-index: 6;
+      text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    }
 
-    /* Hover/active interactions */
-    a.link:active{transform:translateY(2px)}
-    a.link:hover .right{transform:translateY(-4px);box-shadow:0 14px 0 rgba(6,34,66,0.18)}
+    .right::before {
+      content: '';
+      position: absolute;
+      /* PENYESUAIAN BERDASARKAN BRIEF DESAIN: Posisi wedge disesuaikan */
+      left: -40px;
+      top: 0;
+      height: 100%;
+      width: 66px;
+      background: inherit; /* PENYEMPURNAAN: Mewarisi gradien agar konsisten */
+      transform: skewX(-22deg);
+      z-index: 4;
+      border-top-left-radius: 6px;
+      border-bottom-left-radius: 6px;
+    }
+    
+    /* Interaksi Hover/Active */
+    a.link:active {
+      transform: translateY(2px);
+    }
 
-    /* Location white pill */
-    .loc{
-      display:flex;align-items:center;justify-content:center;gap:12px;height:56px;border-radius:28px;background:#fff;color:var(--omagna-blue);font-weight:700;letter-spacing:1.5px;box-shadow: 10px 14px 24px rgba(6,34,66,0.06), -6px -6px 14px rgba(255,255,255,0.9);text-transform:uppercase;margin-top:10px;padding:0 18px;font-size:15px;
+    a.link:hover .right {
+      transform: translateY(-4px);
+      box-shadow: 0 14px 0 rgba(6, 34, 66, 0.18);
+    }
+    
+    /* Tombol Lokasi */
+    .loc {
+      display: inline-flex; /* PENYEMPURNAAN: Inline-flex lebih cocok */
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      height: 56px;
+      border-radius: 28px;
+      background: #fff;
+      color: var(--omagna-blue);
+      font-weight: 700;
+      /* PENYESUAIAN BERDASARKAN BRIEF DESAIN */
+      letter-spacing: 2px;
+      box-shadow: 10px 14px 24px rgba(6, 34, 66, 0.06), -6px -6px 14px rgba(255, 255, 255, 0.9);
+      text-transform: uppercase;
+      margin-top: 10px;
+      padding: 0 24px;
+      font-size: 15px;
       transition: all 0.3s ease;
+      text-decoration: none;
     }
+
     .loc:hover {
       transform: translateY(-2px);
-      box-shadow: 12px 16px 28px rgba(6,34,66,0.08), -6px -6px 14px rgba(255,255,255,0.9);
+      box-shadow: 12px 16px 28px rgba(6, 34, 66, 0.08), -6px -6px 14px rgba(255, 255, 255, 0.9);
     }
-    .loc img{width:26px;height:26px; filter: drop-shadow(0 1px 2px rgba(0,0,0,0.1));}
 
-    /* Footer social icons floating above wave - Diperjelas */
-    .footer{display:flex;align-items:center;justify-content:center;gap:16px;margin-top:30px}
-    .social{
-      width:54px;height:54px;border-radius:50%;
-      display:flex;align-items:center;justify-content:center;
+    .loc img {
+      width: 26px;
+      height: 26px;
+      filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.1));
+    }
+    
+    /* Ikon Sosial Media di Footer */
+    .footer-socials {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      margin-top: 30px;
+    }
+
+    .social {
+      /* PENYESUAIAN BERDASARKAN BRIEF DESAIN: Bentuk diubah menjadi rounded square */
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       background: var(--omagna-blue);
-      border:3px solid #ffffff;
-      box-shadow: 0 8px 20px rgba(6,34,66,0.15);
+      border: 3px solid #ffffff;
+      box-shadow: 0 8px 20px rgba(6, 34, 66, 0.15);
       transition: all 0.3s ease;
     }
+
     .social:hover {
       transform: translateY(-5px) scale(1.1);
-      box-shadow: 0 12px 25px rgba(6,34,66,0.2);
+      box-shadow: 0 12px 25px rgba(6, 34, 66, 0.2);
       background: var(--omagna-blue-dark);
     }
-    .social img{
-      width:28px;height:28px;
-      filter: brightness(0) invert(1) drop-shadow(0 1px 2px rgba(0,0,0,0.2));
+
+    .social img {
+      /* PENYESUAIAN BERDASARKAN BRIEF DESAIN: Ukuran ikon disesuaikan */
+      width: 26px;
+      height: 26px;
+      filter: brightness(0) invert(1) drop-shadow(0 1px 2px rgba(0, 0, 0, 0.2));
+    }
+    
+    /* Gambar Copyright */
+    .copyright-img {
+      margin-top: 20px;
+      /* PENYESUAIAN BERDASARKAN BRIEF DESAIN */
+      width: 220px;
+      height: auto;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      opacity: 0.95;
+      filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.1));
+    }
+    
+    /* PENYEMPURNAAN: Aksesibilitas Fokus yang lebih baik. */
+    /* Menggunakan :focus-visible agar outline hanya muncul saat navigasi keyboard. */
+    a:focus-visible {
+      outline: 3px solid rgba(13, 44, 84, 0.4);
+      outline-offset: 4px;
+      border-radius: var(--btn-radius);
     }
 
-    .copyright-img{
-      margin-top:20px;
-      width:240px;
-      display:block;
-      margin-left:auto;
-      margin-right:auto;
-      opacity:0.95;
-      filter: drop-shadow(0 1px 2px rgba(0,0,0,0.1));
+    /* Khusus untuk .loc dan .social karena bentuknya berbeda */
+    .loc:focus-visible, .social:focus-visible {
+      border-radius: 9999px;
     }
 
-    /* Accessibility focus ring */
-    a:focus{outline:none;box-shadow:0 0 0 6px rgba(13,44,84,0.12);border-radius:12px}
-
-    /* Responsive tweaks */
+    /* Penyesuaian Responsif */
     @media (max-width: 600px) {
-      .logo img{width: 160px;} /* Lebar visual di mobile: 160px */
-      .logo {
-        margin-top: 10px; /* Margin top lebih kecil di mobile */
-        margin-bottom: 12px; /* Gap ke judul sekitar 12px */
-      }
-      .welcome-sm{font-size:16px;}
-      .title{font-size:26px;margin-bottom:25px;}
-      .right{font-size:14px;padding-left:25px;}
-      .loc{font-size:14px;height:50px;}
-      .loc img{width:22px;height:22px}
-      .footer{gap:14px;margin-top:25px;}
-      .social{width:48px;height:48px;}
-      .social img{width:24px;height:24px;}
-      .copyright-img{width:200px;}
-      /* Penyesuaian untuk ikon tombol pada layar kecil */
-      .icon-circle{width:60px;height:60px;}
-      .icon-circle img{width:36px;height:36px;}
-      .left{width:100px;min-width:100px;}
+      .logo img { width: 260px; }
+      .welcome-sm { font-size: 16px; }
+      .title { font-size: 26px; margin-bottom: 25px; }
+      .right { font-size: 14px; padding-left: 25px; letter-spacing: 1.2px; }
+      .loc { font-size: 14px; height: 50px; }
+      .loc img { width: 22px; height: 22px; }
+      .footer-socials { gap: 14px; margin-top: 25px; }
+      .social { width: 44px; height: 44px; border-radius: 10px; }
+      .social img { width: 22px; height: 22px; }
+      .copyright-img { width: 180px; }
+      .icon-circle { width: 52px; height: 52px; }
+      .icon-circle img { width: 32px; height: 32px; }
+      .left { width: 88px; min-width: 88px; }
     }
 
     @media (max-width: 400px) {
-      .logo img{width: 150px;} /* Lebar visual di mobile kecil: 150px */
-      .logo {
-        margin-top: 10px;
-        margin-bottom: 12px;
-      }
-      .welcome-sm{font-size:14px;}
-      .title{font-size:22px;margin-bottom:20px;}
-      .right{font-size:12px;padding-left:20px;}
-      .loc{font-size:12px;height:46px;}
-      .loc img{width:20px;height:20px}
-      .footer{gap:12px;margin-top:20px;}
-      .social{width:44px;height:44px;border-width:2px;}
-      .social img{width:22px;height:22px;}
-      .copyright-img{width:180px;}
-      /* Penyesuaian untuk ikon tombol pada layar sangat kecil */
-      .icon-circle{width:55px;height:55px;}
-      .icon-circle img{width:32px;height:32px;}
-      .left{width:90px;min-width:90px;}
+      .logo img { width: 220px; }
+      .welcome-sm { font-size: 14px; }
+      .title { font-size: 22px; margin-bottom: 20px; }
+      .right { font-size: 12px; padding-left: 20px; letter-spacing: 1px; }
+      .loc { font-size: 12px; height: 46px; }
+      .loc img { width: 20px; height: 20px; }
+      .footer-socials { gap: 12px; margin-top: 20px; }
+      .social { width: 40px; height: 40px; border-width: 2px; border-radius: 8px; }
+      .social img { width: 20px; height: 20px; }
+      .copyright-img { width: 160px; }
+      .icon-circle { width: 48px; height: 48px; }
+      .icon-circle img { width: 28px; height: 28px; }
+      .left { width: 80px; min-width: 80px; }
     }
   </style>
 </head>
-<body>
 
+<body>
   <div class="bg-layer" aria-hidden="true"></div>
   <div class="gradient-overlay" aria-hidden="true"></div>
 
-  <main class="wrap" role="main">
-    <!-- Logo - Posisi di atas teks sesuai gambar referensi -->
-    <div class="logo"><img src="https://raw.githubusercontent.com/hantupota/OMAGNA-INK-SIHANOUKVILLE/refs/heads/main/OMAGNALP/LOGO%20FULL%20COLOR.png" alt="OMAGNA.INK logo"></div>
+  <main class="wrap">
+    <div class="logo">
+      <!-- PENYEMPURNAAN: Menambahkan width, height, dan loading="lazy" untuk performa. -->
+      <img src="https://raw.githubusercontent.com/hantupota/OMAGNA-INK-SIHANOUKVILLE/refs/heads/main/OMAGNALP/LOGO%20FULL%20COLOR.png" alt="Logo OMAGNA.INK" width="320" height="135" loading="eager">
+    </div>
 
-    <!-- Header text -->
-    <div class="welcome-sm">WELCOME TO</div>
+    <!-- PENYEMPURNAAN: Tag <p> lebih semantik untuk teks ini. -->
+    <p class="welcome-sm">WELCOME TO</p>
     <h1 class="title">OMAGNA INK SHANOUKVILLE</h1>
 
-    <!-- Buttons group -->
-    <div class="btns" aria-label="Link buttons">
-
-      <a class="link" href="https://t.me/omagnainkgallery?utm_source=tiktok&utm_medium=cpc&utm_campaign=omagna_lp" target="_blank" rel="noopener noreferrer" aria-label="Grup Komunitas Telegram Omagna">
-        <div class="left"><div class="icon-circle"><img src="https://raw.githubusercontent.com/hantupota/OMAGNA-INK-SIHANOUKVILLE/refs/heads/main/OMAGNALP/ICONS/tele.png" alt="telegram icon"></div></div>
+    <div class="btns" role="navigation" aria-label="Navigasi Utama">
+      <a class="link" href="https://t.me/omagnainkgallery?utm_source=tiktok&utm_medium=cpc&utm_campaign=omagna_lp" target="_blank" rel="noopener noreferrer">
+        <div class="left">
+          <div class="icon-circle"><img src="https://raw.githubusercontent.com/hantupota/OMAGNA-INK-SIHANOUKVILLE/refs/heads/main/OMAGNALP/ICONS/tele.png" alt="" width="38" height="38" loading="lazy"></div>
+        </div>
         <div class="right"><span>KOMUNITAS TELEGRAM OMAGNA</span></div>
       </a>
 
-      <a class="link" href="https://t.me/OmagnainkKPS?utm_source=tiktok&utm_medium=cpc&utm_campaign=omagna_lp" target="_blank" rel="noopener noreferrer" aria-label="Telegram Official Omagna KPS">
-        <div class="left"><div class="icon-circle"><img src="https://raw.githubusercontent.com/hantupota/OMAGNA-INK-SIHANOUKVILLE/refs/heads/main/OMAGNALP/ICONS/tele.png" alt="telegram icon"></div></div>
+      <a class="link" href="https://t.me/OmagnainkKPS?utm_source=tiktok&utm_medium=cpc&utm_campaign=omagna_lp" target="_blank" rel="noopener noreferrer">
+        <div class="left">
+          <div class="icon-circle"><img src="https://raw.githubusercontent.com/hantupota/OMAGNA-INK-SIHANOUKVILLE/refs/heads/main/OMAGNALP/ICONS/tele.png" alt="" width="38" height="38" loading="lazy"></div>
+        </div>
         <div class="right"><span>TELEGRAM OFFICIAL OMAGNA KPS</span></div>
       </a>
 
-      <a class="link" href="https://wa.me/85592376291?utm_source=tiktok&utm_medium=cpc&utm_campaign=omagna_lp" target="_blank" rel="noopener noreferrer" aria-label="Whatsapp Official Omagna KPS">
-        <div class="left"><div class="icon-circle"><img src="https://raw.githubusercontent.com/hantupota/OMAGNA-INK-SIHANOUKVILLE/refs/heads/main/OMAGNALP/ICONS/wa.png" alt="whatsapp icon"></div></div>
+      <a class="link" href="https://wa.me/85592376291?utm_source=tiktok&utm_medium=cpc&utm_campaign=omagna_lp" target="_blank" rel="noopener noreferrer">
+        <div class="left">
+          <div class="icon-circle"><img src="https://raw.githubusercontent.com/hantupota/OMAGNA-INK-SIHANOUKVILLE/refs/heads/main/OMAGNALP/ICONS/wa.png" alt="" width="38" height="38" loading="lazy"></div>
+        </div>
         <div class="right"><span>WHATSAPP OFFICIAL OMAGNA KPS</span></div>
       </a>
 
-      <a class="link" href="https://www.omagna.ink?utm_source=tiktok&utm_medium=cpc&utm_campaign=omagna_lp" target="_blank" rel="noopener noreferrer" aria-label="Website Official Omagna">
-        <div class="left"><div class="icon-circle"><img src="https://raw.githubusercontent.com/hantupota/OMAGNA-INK-SIHANOUKVILLE/refs/heads/main/OMAGNALP/ICONS/web.png" alt="website icon"></div></div>
+      <a class="link" href="https://www.omagna.ink?utm_source=tiktok&utm_medium=cpc&utm_campaign=omagna_lp" target="_blank" rel="noopener noreferrer">
+        <div class="left">
+          <div class="icon-circle"><img src="https://raw.githubusercontent.com/hantupota/OMAGNA-INK-SIHANOUKVILLE/refs/heads/main/OMAGNALP/ICONS/web.png" alt="" width="38" height="38" loading="lazy"></div>
+        </div>
         <div class="right"><span>WEBSITE OFFICIAL OMAGNA</span></div>
       </a>
 
-      <a class="link" href="https://www.facebook.com/omagnainkstudio/?utm_source=tiktok&utm_medium=cpc&utm_campaign=omagna_lp" target="_blank" rel="noopener noreferrer" aria-label="Facebook Official Omagna">
-        <div class="left"><div class="icon-circle"><img src="https://raw.githubusercontent.com/hantupota/OMAGNA-INK-SIHANOUKVILLE/refs/heads/main/OMAGNALP/ICONS/fb.png" alt="facebook icon"></div></div>
+      <a class="link" href="https://www.facebook.com/omagnainkstudio/?utm_source=tiktok&utm_medium=cpc&utm_campaign=omagna_lp" target="_blank" rel="noopener noreferrer">
+        <div class="left">
+          <div class="icon-circle"><img src="https://raw.githubusercontent.com/hantupota/OMAGNA-INK-SIHANOUKVILLE/refs/heads/main/OMAGNALP/ICONS/fb.png" alt="" width="38" height="38" loading="lazy"></div>
+        </div>
         <div class="right"><span>FACEBOOK OFFICIAL OMAGNA</span></div>
       </a>
-
-      <!-- Location pill (white) -->
-      <a class="loc" href="https://maps.app.goo.gl/X3QNBRPypLovY6xF9?g_st=ipc&utm_source=tiktok&utm_medium=cpc&utm_campaign=omagna_lp" target="_blank" rel="noopener noreferrer" aria-label="Lokasi Omagna Ink KPS">
-        <img src="https://raw.githubusercontent.com/hantupota/OMAGNA-INK-SIHANOUKVILLE/refs/heads/main/OMAGNALP/ICONS/loc2.png" alt="location icon">
-        <div>OMAGNA INK KPS LOCATION</div>
-      </a>
-
+      
+      <!-- PENYEMPURNAAN: Tombol lokasi dipisahkan dari grup link utama untuk struktur yang lebih jelas -->
     </div>
+    
+    <a class="loc" href="https://maps.app.goo.gl/X3QNBRPypLovY6xF9?g_st=ipc&utm_source=tiktok&utm_medium=cpc&utm_campaign=omagna_lp" target="_blank" rel="noopener noreferrer">
+      <img src="https://raw.githubusercontent.com/hantupota/OMAGNA-INK-SIHANOUKVILLE/refs/heads/main/OMAGNALP/ICONS/loc2.png" alt="" width="26" height="26" loading="lazy">
+      <span>OMAGNA INK KPS LOCATION</span>
+    </a>
 
-    <!-- Footer + socials -->
-    <div class="footer" aria-label="Sosial media">
-      <a class="social" href="https://www.instagram.com/omagna.ink?igsh=anFpZTY2NXk0ejc4&utm_source=qr" target="_blank" rel="noopener noreferrer" aria-label="Instagram Omagna"><img src="https://raw.githubusercontent.com/hantupota/OMAGNA-INK-SIHANOUKVILLE/refs/heads/main/OMAGNALP/footer/IG%20white.png" alt="ig"></a>
-      <a class="social" href="https://www.tiktok.com/@omagna.ink.kps?_t=ZS-8zfSXyoIz7V&_r=1" target="_blank" rel="noopener noreferrer" aria-label="TikTok Omagna"><img src="https://raw.githubusercontent.com/hantupota/OMAGNA-INK-SIHANOUKVILLE/refs/heads/main/OMAGNALP/footer/tiktok%20white.png" alt="tiktok"></a>
-      <a class="social" href="https://www.youtube.com/@omagnaink" target="_blank" rel="noopener noreferrer" aria-label="YouTube Omagna"><img src="https://raw.githubusercontent.com/hantupota/OMAGNA-INK-SIHANOUKVILLE/refs/heads/main/OMAGNALP/footer/youtube.png" alt="yt"></a>
-    </div>
-
-    <img class="copyright-img" src="https://raw.githubusercontent.com/hantupota/OMAGNA-INK-SIHANOUKVILLE/refs/heads/main/OMAGNALP/footer/%C2%A9%202025%20OMAGNA%20SIHANOUKVILLE.png" alt="copyright">
-
+    <!-- PENYEMPURNAAN: Menggunakan tag <footer> untuk area footer. -->
+    <footer>
+      <div class="footer-socials" aria-label="Sosial media">
+        <a class="social" href="https://www.instagram.com/omagna.ink?igsh=anFpZTY2NXk0ejc4&utm_source=qr" target="_blank" rel="noopener noreferrer" aria-label="Instagram Omagna"><img src="https://raw.githubusercontent.com/hantupota/OMAGNA-INK-SIHANOUKVILLE/refs/heads/main/OMAGNALP/footer/IG%20white.png" alt="Instagram" width="26" height="26" loading="lazy"></a>
+        <a class="social" href="https://www.tiktok.com/@omagna.ink.kps?_t=ZS-8zfSXyoIz7V&_r=1" target="_blank" rel="noopener noreferrer" aria-label="TikTok Omagna"><img src="https://raw.githubusercontent.com/hantupota/OMAGNA-INK-SIHANOUKVILLE/refs/heads/main/OMAGNALP/footer/tiktok%20white.png" alt="TikTok" width="26" height="26" loading="lazy"></a>
+        <a class="social" href="https://www.youtube.com/@omagnaink" target="_blank" rel="noopener noreferrer" aria-label="YouTube Omagna"><img src="https://raw.githubusercontent.com/hantupota/OMAGNA-INK-SIHANOUKVILLE/refs/heads/main/OMAGNALP/footer/youtube.png" alt="YouTube" width="26" height="26" loading="lazy"></a>
+      </div>
+      <img class="copyright-img" src="https://raw.githubusercontent.com/hantupota/OMAGNA-INK-SIHANOUKVILLE/refs/heads/main/OMAGNALP/footer/%C2%A9%202025%20OMAGNA%20SIHANOUKVILLE.png" alt="Copyright 2025 Omagna Sihanoukville" width="220" height="23" loading="lazy">
+    </footer>
   </main>
 
-  <script>
-    // accessibility focus visual
-    document.querySelectorAll('a').forEach(a=>{
-      a.addEventListener('focus', ()=> a.style.boxShadow='0 0 0 6px rgba(13,44,84,0.12)');
-      a.addEventListener('blur', ()=> a.style.boxShadow='');
-    });
-
-    // Prevent scroll bleed on some mobile browsers to keep background placement stable
-    window.addEventListener('touchmove', function(e){}, {passive:true});
-  </script>
+  <!-- PENYEMPURNAAN: Blok script tidak lagi diperlukan.
+       - Penanganan fokus kini dilakukan murni oleh CSS dengan ':focus-visible' untuk pengalaman yang lebih baik.
+       - Pencegahan 'scroll bleed' juga ditangani oleh CSS 'overscroll-behavior'.
+       Kode menjadi lebih bersih dan deklaratif.
+  -->
 </body>
 </html>
