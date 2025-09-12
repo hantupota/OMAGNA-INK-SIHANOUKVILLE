@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>UP OMAGNA INK SHANOUKVILLE</title>
+  <title>full size OMAGNA INK SHANOUKVILLE</title>
 
   <!-- Google Fonts: Montserrat -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,7 +18,7 @@
       --btn-height: 70px;
       --btn-radius: 16px;
       --left-width: 100px;
-      --icon-circle: 120px; /* REVISI: Ukuran lingkaran ikon diperbesar lagi */
+      --icon-circle: 120px; /* Ukuran lingkaran ikon */
       --safe-max: 520px;
     }
 
@@ -38,10 +38,13 @@
       background-color: var(--bg-color);
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
+      /* REVISI: Mengatur tata letak Flexbox untuk mengisi seluruh tinggi halaman */
       display: flex;
-      align-items: flex-start;
-      justify-content: center;
-      padding: 0 16px 40px;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      /* REVISI: Menghapus padding-bottom */
+      padding: 0 16px;
       min-height: 100vh;
       position: relative;
       overscroll-behavior: contain;
@@ -88,7 +91,6 @@
     /* Logo */
     .logo {
       margin-top: 0;
-      /* REVISI: Mengurangi margin-bottom agar lebih rapat dengan teks sambutan */
       margin-bottom: 8px;
       filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
     }
@@ -106,7 +108,7 @@
       transform: scale(1.02);
     }
 
-    /* REVISI: Gaya untuk Teks Penyambutan */
+    /* Gaya untuk Teks Penyambutan */
     .welcome-sm {
       font-size: 13px;
       color: #5a5a5a;
@@ -116,7 +118,7 @@
       text-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
     }
 
-    /* REVISI: Gaya untuk Judul Utama */
+    /* Gaya untuk Judul Utama */
     .title {
       font-size: 30px;
       font-weight: 800;
@@ -374,9 +376,12 @@
   <div class="bg-layer" aria-hidden="true"></div>
   <div class="gradient-overlay" aria-hidden="true"></div>
 
+  <!-- REVISI: Mengatur tata letak halaman agar mengisi seluruh ruang vertikal dengan rapi. -->
+  <!-- Konten utama dan footer dipisahkan agar bisa diatur menggunakan Flexbox. -->
+
   <main class="wrap" role="main">
     <div class="logo">
-      <img src="https://raw.githubusercontent.com/hantupota/Omagna-Ink-landing-page/refs/heads/main/image/omagnaink-logo2025-transparant.webp" 
+      <img src="https://raw.githubusercontent.com/hantupota/OMAGNA-INK-SIHANOUKVILLE/refs/heads/main/OMAGNALP/LOGO%20FULL%20COLOR.png" 
            alt="OMAGNA.INK logo"
            width="380" height="159" loading="eager"
            onerror="this.src='https://via.placeholder.com/380x159/0d2c54/ffffff?text=OMAGNA+LOGO'">
@@ -421,18 +426,18 @@
       <img src="https://raw.githubusercontent.com/hantupota/OMAGNA-INK-SIHANOUKVILLE/refs/heads/main/OMAGNALP/ICONS/loc2.png" alt="location icon" width="55" height="55" loading="lazy">
       <div>OMAGNA INK KPS LOCATION</div>
     </a>
-
-    <!-- Footer + socials -->
-    <footer role="contentinfo">
-      <div class="footer-socials" aria-label="Sosial media">
-        <a class="social" href="https://www.instagram.com/omagna.ink?igsh=anFpZTY2NXk0ejc4&utm_source=qr" target="_blank" rel="noopener noreferrer" aria-label="Instagram Omagna"><img src="https://raw.githubusercontent.com/hantupota/OMAGNA-INK-SIHANOUKVILLE/refs/heads/main/OMAGNALP/footer/IG%20white.png" alt="Instagram" width="45" height="45" loading="lazy"></a>
-        <a class="social" href="https://www.tiktok.com/@omagna.ink.kps?_t=ZS-8zfSXyoIz7V&_r=1" target="_blank" rel="noopener noreferrer" aria-label="TikTok Omagna"><img src="https://raw.githubusercontent.com/hantupota/OMAGNA-INK-SIHANOUKVILLE/refs/heads/main/OMAGNALP/footer/tiktok%20white.png" alt="TikTok" width="45" height="45" loading="lazy"></a>
-        <a class="social" href="https://www.youtube.com/@omagnaink" target="_blank" rel="noopener noreferrer" aria-label="YouTube Omagna"><img src="https://raw.githubusercontent.com/hantupota/OMAGNA-INK-SIHANOUKVILLE/refs/heads/main/OMAGNALP/footer/youtube.png" alt="YouTube" width="45" height="45" loading="lazy"></a>
-      </div>
-
-      <img class="copyright-img" src="https://raw.githubusercontent.com/hantupota/OMAGNA-INK-SIHANOUKVILLE/refs/heads/main/OMAGNALP/footer/%C2%A9%202025%20OMAGNA%20SIHANOUKVILLE.png" alt="Copyright 2025 OMAGNA.INK SHANOUKVILLE" width="240" height="25" loading="lazy">
-    </footer>
   </main>
+
+  <!-- REVISI: Footer dipindahkan ke luar main untuk memungkinkan Flexbox menyebarkan konten dengan benar. -->
+  <footer role="contentinfo">
+    <div class="footer-socials" aria-label="Sosial media">
+      <a class="social" href="https://www.instagram.com/omagna.ink?igsh=anFpZTY2NXk0ejc4&utm_source=qr" target="_blank" rel="noopener noreferrer" aria-label="Instagram Omagna"><img src="https://raw.githubusercontent.com/hantupota/OMAGNA-INK-SIHANOUKVILLE/refs/heads/main/OMAGNALP/footer/IG%20white.png" alt="Instagram" width="45" height="45" loading="lazy"></a>
+      <a class="social" href="https://www.tiktok.com/@omagna.ink.kps?_t=ZS-8zfSXyoIz7V&_r=1" target="_blank" rel="noopener noreferrer" aria-label="TikTok Omagna"><img src="https://raw.githubusercontent.com/hantupota/OMAGNA-INK-SIHANOUKVILLE/refs/heads/main/OMAGNALP/footer/tiktok%20white.png" alt="TikTok" width="45" height="45" loading="lazy"></a>
+      <a class="social" href="https://www.youtube.com/@omagnaink" target="_blank" rel="noopener noreferrer" aria-label="YouTube Omagna"><img src="https://raw.githubusercontent.com/hantupota/OMAGNA-INK-SIHANOUKVILLE/refs/heads/main/OMAGNALP/footer/youtube.png" alt="YouTube" width="45" height="45" loading="lazy"></a>
+    </div>
+
+    <img class="copyright-img" src="https://raw.githubusercontent.com/hantupota/OMAGNA-INK-SIHANOUKVILLE/refs/heads/main/OMAGNALP/footer/%C2%A9%202025%20OMAGNA%20SIHANOUKVILLE.png" alt="Copyright 2025 OMAGNA.INK SHANOUKVILLE" width="240" height="25" loading="lazy">
+  </footer>
 
 </body>
 </html>
