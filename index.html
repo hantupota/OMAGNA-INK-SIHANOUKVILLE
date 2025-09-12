@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Omagna Ink Sihanoukville</title>
+    <!-- Google Fonts untuk tipografi yang tegas dan presisi -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
+    <style>
+        /* CSS direkayasa ulang untuk replikasi 1:1 dari universe desain gelap */
+        :root {
+            --bg-dark: #1a1a1a;
+            --text-light: #e0e0e0;
+            --text-darker: #a0a0a0;
+            --button-bg: rgba(255, 255, 255, 0.1);
+            --button-hover: rgba(255, 255, 255, 0.2);
+            --button-outline-bg: rgba(255, 255, 255, 0.8);
+            --button-outline-text: #1a1a1a;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--bg-dark);
+            background-image: url('https://raw.githubusercontent.com/hantupota/OMAGNA-INK-SIHANOUKVILLE/refs/heads/main/OMAGNALP/bg.png'); /* Gambar background yang sama namun akan ditimpa overlay gelap */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            min-height: 100vh;
+            padding: 20px;
+            box-sizing: border-box;
+            position: relative;
+            color: var(--text-light);
+        }
+
+        /* Overlay gelap untuk menciptakan efek dark mode */
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.7);
+            z-index: 0;
+        }
+        
+        .content, .bottom-nav {
+            position: relative;
+            z-index: 1;
+            width: 100%;
+            max-width: 480px;
+            text-align: center;
+        }
+
+        .content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            flex-grow: 1; 
+            justify-content: center; 
+        }
+
+        .logo {
+            max-width: 140px; 
+            margin-top: 20px;
+            margin-bottom: 25px; 
+        }
+
+        .header-text {
+            max-width: 300px;
+            margin-bottom: 35px;
+        }
+
+        .title-wrapper {
+            margin-bottom: 35px;
+        }
+
+        .title-wrapper .subtitle {
+            font-size: 0.9em;
+            font-weight: 500;
+            letter-spacing: 1px; 
+            margin: 0;
+            color: var(--text-darker);
+            text-transform: uppercase;
+        }
+        
+        .title-wrapper .title {
+            font-size: 1.6em;
+            font-weight: 700; 
+            margin: 8px 0 0 0;
+            color: var(--text-light);
+            text-transform: uppercase;
+        }
+
+        .button-container {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 16px;
+        }
+        
+        .button-link {
+            display: flex;
+            align-items: center;
+            justify-content: space-between; /* Untuk mendorong ikon ke kanan */
+            width: 100%;
+            max-width: 400px;
+            padding: 14px 20px;
+            text-decoration: none;
+            color: var(--text-light);
+            font-weight: 700;
+            font-size: 0.9em;
+            text-transform: uppercase;
+            background: var(--button-bg);
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: background-color 0.2s, transform 0.2s;
+            box-sizing: border-box;
+        }
+        
+        .button-link:hover {
+            background-color: var(--button-hover);
+            transform: scale(1.03);
+        }
+        
+        .button-link.outline {
+            background: var(--button-outline-bg);
+            color: var(--button-outline-text);
+            border: none;
+        }
+
+        .button-icon {
+            width: 28px;
+            height: 28px;
+        }
+
+        .bottom-nav {
+            display: flex;
+            justify-content: center; /* Copyright sekarang di tengah */
+            align-items: center;
+            padding: 20px 0 10px 0;
+            margin-top: 30px;
+        }
+
+        .footer-copyright {
+            font-size: 0.8em;
+            font-weight: 500;
+            color: var(--text-darker);
+            text-transform: uppercase;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="content">
+        <img src="https://raw.githubusercontent.com/hantupota/OMAGNA-INK-SIHANOUKVILLE/refs/heads/main/OMAGNALP/LOGO%20FULL%20COLOR.png" alt="Omagna Ink Logo" class="logo">
+
+        <div class="title-wrapper">
+            <p class="subtitle">WELCOME TO</p>
+            <h1 class="title">OMAGNA INK SIHANOUKVILLE</h1>
+        </div>
+
+        <div class="button-container">
+            <a href="https://t.me/omagnainkgallery" class="button-link" target="_blank">
+                <span>KOMUNITAS TELEGRAM OMAGNA</span>
+                <img src="https://raw.githubusercontent.com/hantupota/OMAGNA-INK-SIHANOUKVILLE/refs/heads/main/OMAGNALP/ICONS/tele.png" class="button-icon" alt="Telegram Icon">
+            </a>
+            <a href="https://t.me/OmagnainkKPS" class="button-link" target="_blank">
+                <span>TELEGRAM OFFICIAL OMAGNA KPS</span>
+                 <img src="https://raw.githubusercontent.com/hantupota/OMAGNA-INK-SIHANOUKVILLE/refs/heads/main/OMAGNALP/ICONS/tele.png" class="button-icon" alt="Telegram Icon">
+            </a>
+            <a href="https://wa.me/85592376291" class="button-link" target="_blank">
+                <span>WHATSAPP OFFICIAL OMAGNA KPS</span>
+                <img src="https://raw.githubusercontent.com/hantupota/OMAGNA-INK-SIHANOUKVILLE/refs/heads/main/OMAGNALP/ICONS/wa.png" class="button-icon" alt="WhatsApp Icon">
+            </a>
+            <a href="https://www.omagna.ink" class="button-link" target="_blank">
+                <span>WEBSITE OFFICIAL OMAGNA</span>
+                <img src="https://raw.githubusercontent.com/hantupota/OMAGNA-INK-SIHANOUKVILLE/refs/heads/main/OMAGNALP/ICONS/web.png" class="button-icon" alt="Website Icon">
+            </a>
+            <a href="https://www.facebook.com/omagnainkstudio/" class="button-link" target="_blank">
+                <span>FACEBOOK OFFICIAL OMAGNA</span>
+                <img src="https://raw.githubusercontent.com/hantupota/OMAGNA-INK-SIHANOUKVILLE/refs/heads/main/OMAGNALP/ICONS/fb.png" class="button-icon" alt="Facebook Icon">
+            </a>
+            <a href="https://maps.app.goo.gl/X3QNBRPypLovY6xF9?g_st=ipc" class="button-link outline" target="_blank">
+                <img src="https://raw.githubusercontent.com/hantupota/OMAGNA-INK-SIHANOUKVILLE/refs/heads/main/OMAGNALP/ICONS/loc.png" class="button-icon" alt="Location Icon">
+                <span>OMAGNA INK KPS LOCATION</span>
+            </a>
+        </div>
+    </div>
+
+    <div class="bottom-nav">
+        <div class="footer-copyright">
+            © 2025 OMAGNA SIHANOUKVILLE
+        </div>
+    </div>
+</body>
+</html>
+
