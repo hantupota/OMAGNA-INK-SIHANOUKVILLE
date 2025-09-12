@@ -1,9 +1,9 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="id">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>X OMAGNA INK SIHANOUKVILLE - Landing</title>
+  <title> v OMAGNA INK SIHANOUKVILLE - Landing</title>
 
   <!-- Montserrat -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&display=swap" rel="stylesheet">
@@ -17,7 +17,7 @@
       --btn-radius: 18px;
       --left-width: 98px;
       --icon-circle: 58px;
-      --safe-max: 420px;
+      --safe-max: 500px;
     }
     *{box-sizing:border-box;margin:0;padding:0}
     html,body{height:100%}
@@ -33,21 +33,21 @@
     .bg-layer{
       position:fixed;inset:0;z-index:0;
       background-image:url('https://raw.githubusercontent.com/hantupota/OMAGNA-INK-SIHANOUKVILLE/refs/heads/main/OMAGNALP/bg2.png');
-      background-repeat:no-repeat; background-position: top center; background-size: contain; pointer-events:none;
+      background-repeat:no-repeat; background-position: center; background-size: cover; pointer-events:none;
     }
 
     /* Main wrapper for content */
     .wrap{position:relative;z-index:10;width:100%;max-width:var(--safe-max);margin:0 auto;text-align:center}
 
     /* Logo */
-    .logo{margin-top:6px;margin-bottom:12px}
-    .logo img{width:150px;max-width:40%;display:block;margin:0 auto}
+    .logo{margin-top:10px;margin-bottom:20px}
+    .logo img{width:280px;max-width:80%;display:block;margin:0 auto}
 
-    .welcome-sm{font-size:13px;color:#606060;letter-spacing:1px;margin-bottom:6px}
-    .title{font-size:26px;font-weight:800;color:#0b0b0b;letter-spacing:1.6px;text-transform:uppercase;margin-bottom:18px}
+    .welcome-sm{font-size:18px;color:#606060;letter-spacing:1.5px;margin-bottom:10px;font-weight:600}
+    .title{font-size:32px;font-weight:800;color:#0b0b0b;letter-spacing:2px;text-transform:uppercase;margin-bottom:30px;line-height:1.2}
 
     /* Buttons container */
-    .btns{display:flex;flex-direction:column;gap:18px;margin-top:6px;padding:0 6px}
+    .btns{display:flex;flex-direction:column;gap:18px;margin-top:10px;padding:0 10px}
 
     /* Generic link style (reset) */
     a.link{display:flex;align-items:stretch;height:var(--btn-height);border-radius:var(--btn-radius);position:relative;text-decoration:none;min-width:100%;transition:transform 120ms ease}
@@ -67,7 +67,7 @@
     /* Dark CTA panel */
     .right{
       flex:1;background:linear-gradient(180deg,var(--omagna-blue),var(--omagna-blue-dark));border-top-right-radius:var(--btn-radius);border-bottom-right-radius:var(--btn-radius);
-      display:flex;align-items:center;padding-left:34px;padding-right:20px;position:relative;color:#fff;font-weight:800;letter-spacing:1.6px;text-transform:uppercase;font-size:18px;z-index:2;box-shadow: 0 8px 0 rgba(6,34,66,0.44);
+      display:flex;align-items:center;padding-left:30px;padding-right:20px;position:relative;color:#fff;font-weight:700;letter-spacing:1px;text-transform:uppercase;font-size:16px;z-index:2;box-shadow: 0 8px 0 rgba(6,34,66,0.44);
     }
     .right span{z-index:6}
 
@@ -79,24 +79,42 @@
     a.link:hover .right{transform:translateY(-4px);box-shadow:0 14px 0 rgba(6,34,66,0.18)}
 
     /* Location white pill */
-    .loc{display:flex;align-items:center;justify-content:center;gap:12px;height:56px;border-radius:28px;background:#fff;color:var(--omagna-blue);font-weight:800;letter-spacing:2px;box-shadow: 10px 14px 24px rgba(6,34,66,0.06), -6px -6px 14px rgba(255,255,255,0.9);text-transform:uppercase;margin-top:6px;padding:0 18px}
+    .loc{display:flex;align-items:center;justify-content:center;gap:12px;height:56px;border-radius:28px;background:#fff;color:var(--omagna-blue);font-weight:700;letter-spacing:1.5px;box-shadow: 10px 14px 24px rgba(6,34,66,0.06), -6px -6px 14px rgba(255,255,255,0.9);text-transform:uppercase;margin-top:10px;padding:0 18px;font-size:15px}
     .loc img{width:22px;height:22px}
 
     /* Footer social icons floating above wave */
-    .footer{display:flex;align-items:center;justify-content:center;gap:14px;margin-top:20px}
+    .footer{display:flex;align-items:center;justify-content:center;gap:16px;margin-top:30px}
     .social{width:48px;height:48px;border-radius:12px;display:flex;align-items:center;justify-content:center;background:transparent;border:3px solid #ffffff;box-shadow: 0 8px 20px rgba(6,34,66,0.08)}
     .social img{width:26px;height:26px}
 
-    .copyright-img{margin-top:8px;width:220px;display:block;margin-left:auto;margin-right:auto;opacity:0.95}
+    .copyright-img{margin-top:15px;width:240px;display:block;margin-left:auto;margin-right:auto;opacity:0.95}
 
     /* Accessibility focus ring */
     a:focus{outline:none;box-shadow:0 0 0 6px rgba(13,44,84,0.12);border-radius:12px}
 
     /* Responsive tweaks */
-    @media (min-width:768px){
-      .title{font-size:30px}
-      .right{font-size:20px}
-      .wrap{padding:6px}
+    @media (max-width: 600px) {
+      .logo img{width:220px;}
+      .welcome-sm{font-size:16px;}
+      .title{font-size:26px;margin-bottom:25px;}
+      .right{font-size:14px;padding-left:25px;}
+      .loc{font-size:14px;height:50px;}
+      .footer{gap:14px;margin-top:25px;}
+      .social{width:44px;height:44px;}
+      .social img{width:24px;height:24px;}
+      .copyright-img{width:200px;}
+    }
+
+    @media (max-width: 400px) {
+      .logo img{width:180px;}
+      .welcome-sm{font-size:14px;}
+      .title{font-size:22px;margin-bottom:20px;}
+      .right{font-size:12px;padding-left:20px;}
+      .loc{font-size:12px;height:46px;}
+      .footer{gap:12px;margin-top:20px;}
+      .social{width:40px;height:40px;border-width:2px;}
+      .social img{width:20px;height:20px;}
+      .copyright-img{width:180px;}
     }
   </style>
 </head>
@@ -110,40 +128,40 @@
 
     <!-- Header text -->
     <div class="welcome-sm">WELCOME TO</div>
-    <h1 class="title">OMAGNA INK SIHANOUKVILLE</h1>
+    <h1 class="title">OMAGNA INK SHANOUKVILLE</h1>
 
     <!-- Buttons group -->
     <div class="btns" aria-label="Link buttons">
 
       <a class="link" href="https://t.me/omagnainkgallery?utm_source=tiktok&utm_medium=cpc&utm_campaign=omagna_lp" target="_blank" rel="noopener noreferrer" aria-label="Grup Komunitas Telegram Omagna">
         <div class="left"><div class="icon-circle"><img src="https://raw.githubusercontent.com/hantupota/OMAGNA-INK-SIHANOUKVILLE/refs/heads/main/OMAGNALP/ICONS/tele.png" alt="telegram icon"></div></div>
-        <div class="right"><span>Komunitas Telegram Omagna</span></div>
+        <div class="right"><span>KOMUNITAS TELEGRAM OMAGNA</span></div>
       </a>
 
       <a class="link" href="https://t.me/OmagnainkKPS?utm_source=tiktok&utm_medium=cpc&utm_campaign=omagna_lp" target="_blank" rel="noopener noreferrer" aria-label="Telegram Official Omagna KPS">
         <div class="left"><div class="icon-circle"><img src="https://raw.githubusercontent.com/hantupota/OMAGNA-INK-SIHANOUKVILLE/refs/heads/main/OMAGNALP/ICONS/tele.png" alt="telegram icon"></div></div>
-        <div class="right"><span>Telegram Official Omagna KPS</span></div>
+        <div class="right"><span>TELEGRAM OFFICIAL OMAGNA KPS</span></div>
       </a>
 
       <a class="link" href="https://wa.me/85592376291?utm_source=tiktok&utm_medium=cpc&utm_campaign=omagna_lp" target="_blank" rel="noopener noreferrer" aria-label="Whatsapp Official Omagna KPS">
         <div class="left"><div class="icon-circle"><img src="https://raw.githubusercontent.com/hantupota/OMAGNA-INK-SIHANOUKVILLE/refs/heads/main/OMAGNALP/ICONS/wa.png" alt="whatsapp icon"></div></div>
-        <div class="right"><span>Whatsapp Official Omagna KPS</span></div>
+        <div class="right"><span>WHATSAPP OFFICIAL OMAGNA KPS</span></div>
       </a>
 
       <a class="link" href="https://www.omagna.ink?utm_source=tiktok&utm_medium=cpc&utm_campaign=omagna_lp" target="_blank" rel="noopener noreferrer" aria-label="Website Official Omagna">
         <div class="left"><div class="icon-circle"><img src="https://raw.githubusercontent.com/hantupota/OMAGNA-INK-SIHANOUKVILLE/refs/heads/main/OMAGNALP/ICONS/web.png" alt="website icon"></div></div>
-        <div class="right"><span>Website Official Omagna</span></div>
+        <div class="right"><span>WEBSITE OFFICIAL OMAGNA</span></div>
       </a>
 
       <a class="link" href="https://www.facebook.com/omagnainkstudio/?utm_source=tiktok&utm_medium=cpc&utm_campaign=omagna_lp" target="_blank" rel="noopener noreferrer" aria-label="Facebook Official Omagna">
         <div class="left"><div class="icon-circle"><img src="https://raw.githubusercontent.com/hantupota/OMAGNA-INK-SIHANOUKVILLE/refs/heads/main/OMAGNALP/ICONS/fb.png" alt="facebook icon"></div></div>
-        <div class="right"><span>Facebook Official Omagna</span></div>
+        <div class="right"><span>FACEBOOK OFFICIAL OMAGNA</span></div>
       </a>
 
       <!-- Location pill (white) -->
       <a class="loc" href="https://maps.app.goo.gl/X3QNBRPypLovY6xF9?g_st=ipc&utm_source=tiktok&utm_medium=cpc&utm_campaign=omagna_lp" target="_blank" rel="noopener noreferrer" aria-label="Lokasi Omagna Ink KPS">
         <img src="https://raw.githubusercontent.com/hantupota/OMAGNA-INK-SIHANOUKVILLE/refs/heads/main/OMAGNALP/ICONS/loc2.png" alt="location icon">
-        <div>Omagna Ink KPS Location</div>
+        <div>OMAGNA INK KPS LOCATION</div>
       </a>
 
     </div>
