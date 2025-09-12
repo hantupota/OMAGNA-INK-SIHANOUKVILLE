@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>OMAGNA INK SHANOUKVILLE</title>
+  <title>BRO OMAGNA INK SIHANOUKVILLE - Landing</title>
 
   <!-- Google Fonts: Montserrat -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -39,14 +39,11 @@
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
       display: flex;
-      /* REVISI: Mengembalikan hukum fisika 'flex-start' untuk mencegah logo terpotong. */
       align-items: flex-start;
       justify-content: center;
-      /* REVISI FINAL: Padding atas diminimalkan untuk posisi logo paling tinggi. */
-      padding: 10px 16px 40px;
+      padding: 5px 16px 40px;
       min-height: 100vh;
       position: relative;
-      /* PENYEMPURNAAN: Menggunakan CSS untuk stabilitas scroll, lebih efisien daripada JS. */
       overscroll-behavior: contain;
     }
 
@@ -89,15 +86,13 @@
 
     /* Logo */
     .logo {
-      /* REVISI: Margin disesuaikan untuk posisi yang lebih tinggi dan bersih. */
       margin-top: 0;
-      margin-bottom: 25px;
+      margin-bottom: 20px; /* REVISI: Mengurangi jarak untuk kerapian */
       filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
     }
 
     .logo img {
-      /* REVISI FINAL: Ukuran logo dimaksimalkan untuk dampak visual terkuat. */
-      width: 380px;
+      width: 400px;
       max-width: 90%;
       height: auto;
       display: block;
@@ -124,7 +119,7 @@
       color: #0b0b0b;
       letter-spacing: 2px;
       text-transform: uppercase;
-      margin-bottom: 30px;
+      margin-bottom: 25px; /* REVISI: Mengurangi jarak untuk kerapian */
       line-height: 1.2;
       text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     }
@@ -133,7 +128,7 @@
     .btns {
       display: flex;
       flex-direction: column;
-      gap: 16px;
+      gap: 18px; /* REVISI: Sedikit menambah jarak antar tombol */
       margin-top: 10px;
       padding: 0 10px;
     }
@@ -254,11 +249,10 @@
       letter-spacing: 1.5px;
       box-shadow: 8px 10px 20px rgba(6, 34, 66, 0.06), -4px -4px 10px rgba(255, 255, 255, 0.9);
       text-transform: uppercase;
-      margin-top: 10px;
       padding: 0 16px;
       font-size: 14px;
       transition: all 0.3s ease;
-      text-decoration: none; /* Menambahkan ini untuk konsistensi */
+      text-decoration: none;
     }
 
     .loc:hover {
@@ -267,8 +261,8 @@
     }
 
     .loc img {
-      width: 24px;
-      height: 24px;
+      width: 26px;
+      height: 26px;
       filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.1));
     }
 
@@ -281,36 +275,38 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 16px;
+      gap: 20px; /* REVISI: Menambah jarak untuk menonjolkan */
     }
 
     .social {
-      width: 50px;
-      height: 50px;
+      /* REVISI (AMPLIFIKASI): Ukuran ikon sosial diperbesar untuk lebih menonjol */
+      width: 60px;
+      height: 60px;
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
       background: var(--omagna-blue);
       border: 3px solid #ffffff;
-      box-shadow: 0 6px 16px rgba(6, 34, 66, 0.15);
+      box-shadow: 0 8px 18px rgba(6, 34, 66, 0.15); /* REVISI: Shadow diperkuat */
       transition: all 0.3s ease;
     }
 
     .social:hover {
-      transform: translateY(-4px) scale(1.1);
-      box-shadow: 0 10px 20px rgba(6, 34, 66, 0.2);
+      transform: translateY(-5px) scale(1.1); /* REVISI: Efek hover diperkuat */
+      box-shadow: 0 12px 22px rgba(6, 34, 66, 0.22);
       background: var(--omagna-blue-dark);
     }
 
     .social img {
-      width: 26px;
-      height: 26px;
+      /* REVISI (AMPLIFIKASI): Ukuran gambar di dalam ikon sosial disesuaikan */
+      width: 32px;
+      height: 32px;
       filter: brightness(0) invert(1) drop-shadow(0 1px 2px rgba(0, 0, 0, 0.2));
     }
 
     .copyright-img {
-      margin-top: 20px;
+      margin-top: 25px; /* REVISI: Jarak disesuaikan */
       width: 240px;
       display: block;
       margin-left: auto;
@@ -331,18 +327,18 @@
 
     /* Penyesuaian Responsif */
     @media (max-width: 600px) {
-      .logo img { width: 320px; }
+      .logo img { width: 340px; }
       .logo { margin-bottom: 20px; }
       .welcome-sm { font-size: 16px; }
       .title { font-size: 26px; margin-bottom: 25px; }
-      .btns { gap: 14px; }
+      .btns { gap: 16px; }
       .right { font-size: 13px; padding-left: 20px; padding-right: 15px; }
       .loc { font-size: 13px; height: 46px; padding: 0 14px; }
-      .loc img { width: 22px; height: 22px; }
+      .loc img { width: 24px; height: 24px; }
       footer { margin-top: 25px; }
-      .footer-socials { gap: 14px; }
-      .social { width: 46px; height: 46px; }
-      .social img { width: 24px; height: 24px; }
+      .footer-socials { gap: 16px; }
+      .social { width: 54px; height: 54px; }
+      .social img { width: 28px; height: 28px; }
       .copyright-img { width: 200px; }
       .icon-circle { width: 52px; height: 52px; }
       .icon-circle img { width: 34px; height: 34px; }
@@ -351,18 +347,18 @@
     }
 
     @media (max-width: 400px) {
-      .logo img { width: 260px; }
+      .logo img { width: 280px; }
       .logo { margin-bottom: 15px; }
       .welcome-sm { font-size: 14px; }
       .title { font-size: 22px; margin-bottom: 20px; }
-      .btns { gap: 12px; }
+      .btns { gap: 14px; }
       .right { font-size: 12px; padding-left: 18px; padding-right: 12px; }
       .loc { font-size: 12px; height: 42px; padding: 0 12px; }
-      .loc img { width: 20px; height: 20px; }
+      .loc img { width: 22px; height: 22px; }
       footer { margin-top: 20px; }
-      .footer-socials { gap: 12px; }
-      .social { width: 42px; height: 42px; border-width: 2px; }
-      .social img { width: 22px; height: 22px; }
+      .footer-socials { gap: 14px; }
+      .social { width: 50px; height: 50px; border-width: 2px; }
+      .social img { width: 26px; height: 26px; }
       .copyright-img { width: 180px; }
       .icon-circle { width: 48px; height: 48px; }
       .icon-circle img { width: 32px; height: 32px; }
@@ -377,18 +373,17 @@
 
   <main class="wrap" role="main">
     <div class="logo">
-      <!-- REVISI: Menambahkan atribut width, height, dan loading untuk performa optimal. -->
       <img src="https://raw.githubusercontent.com/hantupota/OMAGNA-INK-SIHANOUKVILLE/refs/heads/main/OMAGNALP/LOGO%20FULL%20COLOR.png" 
            alt="OMAGNA.INK logo"
-           width="380" height="159" loading="eager"
-           onerror="this.src='https://via.placeholder.com/380x159/0d2c54/ffffff?text=OMAGNA+LOGO'">
+           width="400" height="168" loading="eager"
+           onerror="this.src='https://via.placeholder.com/400x168/0d2c54/ffffff?text=OMAGNA+LOGO'">
     </div>
 
     <!-- Header text -->
     <p class="welcome-sm">WELCOME TO</p>
     <h1 class="title">OMAGNA INK SHANOUKVILLE</h1>
 
-    <!-- Buttons group -->
+    <!-- REVISI STRUKTURAL: Semua tombol disatukan dalam satu kontainer untuk kerapian. -->
     <div class="btns" aria-label="Link buttons">
 
       <a class="link" href="https://t.me/omagnainkgallery?utm_source=tiktok&utm_medium=cpc&utm_campaign=omagna_lp" target="_blank" rel="noopener noreferrer" aria-label="Grup Komunitas Telegram Omagna">
@@ -416,29 +411,24 @@
         <div class="right"><span>FACEBOOK OFFICIAL OMAGNA</span></div>
       </a>
 
+      <!-- Tombol Lokasi kini menjadi bagian dari grup utama. -->
+      <a class="loc" href="https://maps.app.goo.gl/X3QNBRPypLovY6xF9?g_st=ipc&utm_source=tiktok&utm_medium=cpc&utm_campaign=omagna_lp" target="_blank" rel="noopener noreferrer" aria-label="Lokasi Omagna Ink KPS">
+        <img src="https://raw.githubusercontent.com/hantupota/OMAGNA-INK-SIHANOUKVILLE/refs/heads/main/OMAGNALP/ICONS/loc2.png" alt="location icon" width="26" height="26" loading="lazy">
+        <div>OMAGNA INK KPS LOCATION</div>
+      </a>
     </div>
-    
-    <!-- Location pill (white) -->
-    <a class="loc" href="https://maps.app.goo.gl/X3QNBRPypLovY6xF9?g_st=ipc&utm_source=tiktok&utm_medium=cpc&utm_campaign=omagna_lp" target="_blank" rel="noopener noreferrer" aria-label="Lokasi Omagna Ink KPS">
-      <img src="https://raw.githubusercontent.com/hantupota/OMAGNA-INK-SIHANOUKVILLE/refs/heads/main/OMAGNALP/ICONS/loc2.png" alt="location icon" width="24" height="24" loading="lazy">
-      <div>OMAGNA INK KPS LOCATION</div>
-    </a>
 
     <!-- Footer + socials -->
     <footer role="contentinfo">
       <div class="footer-socials" aria-label="Sosial media">
-        <a class="social" href="https://www.instagram.com/omagna.ink?igsh=anFpZTY2NXk0ejc4&utm_source=qr" target="_blank" rel="noopener noreferrer" aria-label="Instagram Omagna"><img src="https://raw.githubusercontent.com/hantupota/OMAGNA-INK-SIHANOUKVILLE/refs/heads/main/OMAGNALP/footer/IG%20white.png" alt="Instagram" width="26" height="26" loading="lazy"></a>
-        <a class="social" href="https://www.tiktok.com/@omagna.ink.kps?_t=ZS-8zfSXyoIz7V&_r=1" target="_blank" rel="noopener noreferrer" aria-label="TikTok Omagna"><img src="https://raw.githubusercontent.com/hantupota/OMAGNA-INK-SIHANOUKVILLE/refs/heads/main/OMAGNALP/footer/tiktok%20white.png" alt="TikTok" width="26" height="26" loading="lazy"></a>
-        <a class="social" href="https://www.youtube.com/@omagnaink" target="_blank" rel="noopener noreferrer" aria-label="YouTube Omagna"><img src="https://raw.githubusercontent.com/hantupota/OMAGNA-INK-SIHANOUKVILLE/refs/heads/main/OMAGNALP/footer/youtube.png" alt="YouTube" width="26" height="26" loading="lazy"></a>
+        <a class="social" href="https://www.instagram.com/omagna.ink?igsh=anFpZTY2NXk0ejc4&utm_source=qr" target="_blank" rel="noopener noreferrer" aria-label="Instagram Omagna"><img src="https://raw.githubusercontent.com/hantupota/OMAGNA-INK-SIHANOUKVILLE/refs/heads/main/OMAGNALP/footer/IG%20white.png" alt="Instagram" width="32" height="32" loading="lazy"></a>
+        <a class="social" href="https://www.tiktok.com/@omagna.ink.kps?_t=ZS-8zfSXyoIz7V&_r=1" target="_blank" rel="noopener noreferrer" aria-label="TikTok Omagna"><img src="https://raw.githubusercontent.com/hantupota/OMAGNA-INK-SIHANOUKVILLE/refs/heads/main/OMAGNALP/footer/tiktok%20white.png" alt="TikTok" width="32" height="32" loading="lazy"></a>
+        <a class="social" href="https://www.youtube.com/@omagnaink" target="_blank" rel="noopener noreferrer" aria-label="YouTube Omagna"><img src="https://raw.githubusercontent.com/hantupota/OMAGNA-INK-SIHANOUKVILLE/refs/heads/main/OMAGNALP/footer/youtube.png" alt="YouTube" width="32" height="32" loading="lazy"></a>
       </div>
 
-      <img class="copyright-img" src="https://raw.githubusercontent.com/hantupota/OMAGNA-INK-SIHANOUKVILLE/refs/heads/main/OMAGNALP/footer/%C2%A9%202025%20OMAGNA%20SIHANOUKVILLE.png" alt="Copyright 2025 OMAGNA.INK SHANOUKVILLE" width="240" height="25" loading="lazy">
+      <img class="copyright-img" src="https://raw.githubusercontent.com/hantupota/OMAGNA-INK-SIHANOUKVILLE/refs/heads/main/OMAGNALP/footer/%C2%A9%202025%20OMAGNA%20SIHANOUKVILLE.png" alt="Copyright 2025 Omagna Sihanoukville" width="240" height="25" loading="lazy">
     </footer>
   </main>
 
-  <!-- REVISI: Blok script ini tidak lagi diperlukan karena fungsinya telah digantikan
-       oleh solusi CSS yang lebih modern dan efisien (:focus-visible dan overscroll-behavior).
-       Menghapusnya membuat kode lebih bersih.
-  -->
 </body>
 </html>
