@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SUPER Omagna Ink Sihanoukville - Landing Page</title>
+  <title>BEST Omagna Ink Sihanoukville - Landing Page</title>
 
   <!-- Google Fonts: Montserrat -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,11 +15,11 @@
       --omagna-blue: #0d2c54; /* primary navy */
       --omagna-blue-dark: #0b2644; /* darker tone */
       --bg-color: #f6f7f8;
-      /* PENYESUAIAN BERDASARKAN BRIEF DESAIN */
-      --btn-height: 74px;
-      --btn-radius: 18px;
-      --left-width: 94px;
-      --icon-circle: 58px;
+      /* PENYESUAIAN: Tombol diperkecil */
+      --btn-height: 68px;
+      --btn-radius: 16px;
+      --left-width: 90px;
+      --icon-circle: 58px; /* PENYESUAIAN: Medan ikon diperluas */
       --safe-max: 520px;
     }
 
@@ -42,7 +42,7 @@
       display: flex;
       align-items: flex-start; /* PENYESUAIAN: Memastikan logo tidak terpotong di layar yang lebih pendek */
       justify-content: center;
-      padding: 40px 16px; /* Menambah ruang di bagian atas */
+      padding: 5px 16px 40px; /* PENYESUAIAN: Padding atas dikurangi lagi untuk posisi logo yang lebih tinggi */
       min-height: 100vh;
       position: relative;
       /* PENYEMPURNAAN: Mencegah 'scroll bleed' di mobile dengan CSS, lebih modern daripada JS. */
@@ -88,14 +88,14 @@
 
     /* Logo */
     .logo {
-      margin-top: 10px;
+      margin-top: 0; /* PENYESUAIAN: Logo dinaikkan sedikit */
       margin-bottom: 25px;
       filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
     }
 
     .logo img {
-      width: 320px; /* PENYESUAIAN: Ukuran logo disesuaikan */
-      max-width: 85%;
+      width: 360px; /* PENYESUAIAN: Ukuran logo diperbesar lagi untuk kehadiran yang lebih kuat */
+      max-width: 90%; /* Disesuaikan agar tidak terlalu lebar di layar sempit */
       height: auto; /* PENYEMPURNAAN: Menjaga rasio aspek gambar */
       display: block;
       margin: 0 auto;
@@ -130,7 +130,7 @@
     .btns {
       display: flex;
       flex-direction: column;
-      gap: 20px; /* PENYESUAIAN BERDASARKAN BRIEF DESAIN */
+      gap: 18px; /* PENYESUAIAN: Jarak disesuaikan */
       margin-top: 10px;
       padding: 0 10px;
     }
@@ -177,7 +177,7 @@
     }
 
     .icon-circle img {
-      /* PENYESUAIAN BERDASARKAN BRIEF DESAIN: Ukuran ikon disesuaikan */
+      /* PENYESUAIAN: Ukuran ikon diperbesar */
       width: 38px;
       height: 38px;
       object-fit: contain;
@@ -205,7 +205,7 @@
       /* PENYESUAIAN BERDASARKAN BRIEF DESAIN */
       letter-spacing: 1.6px;
       text-transform: uppercase;
-      font-size: 15px; /* Disesuaikan agar pas dalam tombol yang lebih pendek */
+      font-size: 14px; /* Disesuaikan agar pas dalam tombol yang lebih pendek */
       z-index: 2;
       box-shadow: 0 8px 0 rgba(6, 34, 66, 0.44);
       /* PENYEMPURNAAN: Transisi dipindahkan ke sini untuk efek hover yang lebih halus */
@@ -221,10 +221,10 @@
       content: '';
       position: absolute;
       /* PENYESUAIAN BERDASARKAN BRIEF DESAIN: Posisi wedge disesuaikan */
-      left: -40px;
+      left: -42px;
       top: 0;
       height: 100%;
-      width: 66px;
+      width: 60px;
       background: inherit; /* PENYEMPURNAAN: Mewarisi gradien agar konsisten */
       transform: skewX(-22deg);
       z-index: 4;
@@ -339,7 +339,7 @@
 
     /* Penyesuaian Responsif */
     @media (max-width: 600px) {
-      .logo img { width: 260px; }
+      .logo img { width: 300px; }
       .welcome-sm { font-size: 16px; }
       .title { font-size: 26px; margin-bottom: 25px; }
       .right { font-size: 14px; padding-left: 25px; letter-spacing: 1.2px; }
@@ -349,13 +349,14 @@
       .social { width: 44px; height: 44px; border-radius: 10px; }
       .social img { width: 22px; height: 22px; }
       .copyright-img { width: 180px; }
-      .icon-circle { width: 52px; height: 52px; }
-      .icon-circle img { width: 32px; height: 32px; }
+      .icon-circle { width: 56px; height: 56px; }
+      .icon-circle img { width: 36px; height: 36px; }
       .left { width: 88px; min-width: 88px; }
+      .right::before { left: -38px; width: 54px; }
     }
 
     @media (max-width: 400px) {
-      .logo img { width: 220px; }
+      .logo img { width: 250px; }
       .welcome-sm { font-size: 14px; }
       .title { font-size: 22px; margin-bottom: 20px; }
       .right { font-size: 12px; padding-left: 20px; letter-spacing: 1px; }
@@ -365,9 +366,10 @@
       .social { width: 40px; height: 40px; border-width: 2px; border-radius: 8px; }
       .social img { width: 20px; height: 20px; }
       .copyright-img { width: 160px; }
-      .icon-circle { width: 48px; height: 48px; }
-      .icon-circle img { width: 28px; height: 28px; }
+      .icon-circle { width: 52px; height: 52px; }
+      .icon-circle img { width: 32px; height: 32px; }
       .left { width: 80px; min-width: 80px; }
+      .right::before { left: -33px; width: 48px; }
     }
   </style>
 </head>
@@ -379,7 +381,7 @@
   <main class="wrap">
     <div class="logo">
       <!-- PENYEMPURNAAN: Menambahkan width, height, dan loading="lazy" untuk performa. -->
-      <img src="https://raw.githubusercontent.com/hantupota/OMAGNA-INK-SIHANOUKVILLE/refs/heads/main/OMAGNALP/LOGO%20FULL%20COLOR.png" alt="Logo OMAGNA.INK" width="320" height="135" loading="eager">
+      <img src="https://raw.githubusercontent.com/hantupota/OMAGNA-INK-SIHANOUKVILLE/refs/heads/main/OMAGNALP/LOGO%20FULL%20COLOR.png" alt="Logo OMAGNA.INK" width="360" height="151" loading="eager">
     </div>
 
     <!-- PENYEMPURNAAN: Tag <p> lebih semantik untuk teks ini. -->
