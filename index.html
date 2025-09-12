@@ -9,21 +9,19 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800&display=swap" rel="stylesheet">
     <style>
-        /* Protokol Cermin Kuantum v3.0: Rekonstruksi Universe Cerah */
+        /* Protokol Cermin Kuantum Absolut: CSS Direkonstruksi Total dari Nol */
         :root {
             --bg-light: #f0f2f5;
-            --brand-dark-blue: #0d2c54;
-            --text-dark: #222222;
             --text-light: #ffffff;
-            --text-secondary: #555555;
-            --button-shadow: rgba(0, 0, 0, 0.15);
+            --text-dark: #0d2c54;
+            --main-blue: #0d2c54;
         }
 
         body {
             margin: 0;
             font-family: 'Montserrat', sans-serif;
             background-color: var(--bg-light);
-            /* Latar belakang grafis dari universe cerah */
+            /* Atmosfer: Latar belakang grafis dari universe cerah */
             background-image: url('https://raw.githubusercontent.com/hantupota/OMAGNA-INK-SIHANOUKVILLE/refs/heads/main/OMAGNALP/bg2.png');
             background-size: cover;
             background-position: center;
@@ -51,11 +49,13 @@
             justify-content: center;
         }
 
+        /* Partikel Logo: Massa dan posisi dikunci */
         .logo {
-            max-width: 140px; /* Dikalibrasi: Massa partikel logo ditingkatkan untuk kehadiran yang lebih kuat */
+            max-width: 130px;
             margin-bottom: 25px; 
         }
 
+        /* Partikel Teks Header: Gravitasi dan massa dikunci */
         .title-wrapper {
             margin-bottom: 45px;
         }
@@ -65,18 +65,19 @@
             font-weight: 500;
             letter-spacing: 1.5px; 
             margin: 0;
-            color: var(--text-secondary);
+            color: var(--text-dark);
             text-transform: uppercase;
         }
         
         .title-wrapper .title {
-            font-size: 1.6rem;
+            font-size: 1.5rem;
             font-weight: 800; 
             margin: 8px 0 0 0;
             color: var(--text-dark);
             text-transform: uppercase;
         }
 
+        /* Kontainer Partikel Tombol: Gravitasi internal dikalibrasi */
         .button-container {
             width: 100%;
             display: flex;
@@ -85,14 +86,15 @@
             gap: 18px; 
         }
         
+        /* Partikel Tombol: Semua properti fisika dikunci */
         .button-link {
             display: flex;
             align-items: center;
-            justify-content: center; /* Teks dan Ikon di tengah */
-            gap: 12px; /* Jarak antara ikon dan teks */
+            justify-content: flex-start; /* Teks dan ikon rata kiri */
+            gap: 15px; /* Jarak antara ikon dan teks */
             width: 100%;
             max-width: 380px; 
-            height: 60px; /* Dikalibrasi: Tinggi tombol disesuaikan untuk partikel ikon yang lebih besar */
+            height: 60px;
             padding: 0 25px;
             text-decoration: none;
             color: var(--text-light);
@@ -100,31 +102,37 @@
             font-size: 0.8rem;
             letter-spacing: 1px;
             text-transform: uppercase;
-            background-color: var(--brand-dark-blue);
-            border-radius: 14px;
+            background: var(--main-blue);
+            border-radius: 12px;
             border: none;
             transition: all 0.2s ease-in-out;
             box-sizing: border-box;
-            box-shadow: 0 5px 15px var(--button-shadow);
+            box-shadow: 0 8px 20px rgba(13, 44, 84, 0.25);
         }
         
         .button-link:hover {
             transform: translateY(-3px);
-            box-shadow: 0 8px 20px var(--button-shadow);
+            box-shadow: 0 12px 25px rgba(13, 44, 84, 0.35);
+            filter: brightness(1.1);
         }
         
         .button-link.outline {
-            background: var(--text-light);
-            color: var(--brand-dark-blue);
-            border: 1px solid #ddd;
+            background: #ffffff;
+            color: var(--text-dark);
+            border: 1px solid #e0e0e0;
+            justify-content: center;
+            gap: 10px;
+            border-radius: 50px; /* Bentuk Pill */
         }
         
+        /* Partikel Ikon: Massa dan Entanglement dengan Teks dipastikan */
         .button-icon {
-            width: 28px; /* Dikalibrasi: Massa partikel ikon tombol ditingkatkan secara signifikan */
-            height: 28px; /* Dikalibrasi */
+            width: 28px;
+            height: 28px;
             flex-shrink: 0;
         }
 
+        /* Partikel Footer: Dikunci pada posisi final */
         .bottom-nav {
             width: 100%;
             max-width: 420px;
@@ -137,55 +145,60 @@
 
         .social-links {
             display: flex;
-            gap: 24px; /* Dikalibrasi: Gravitasi antar ikon sosial dilemahkan untuk ruang napas */
+            gap: 24px;
         }
 
         .social-icon {
-            width: 32px; /* Dikalibrasi: Massa partikel ikon sosial ditingkatkan untuk kejelasan maksimal */
-            height: 32px; /* Dikalibrasi */
+            width: 30px;
+            height: 30px;
             transition: transform 0.2s ease-in-out;
+            filter: invert(15%) sepia(21%) saturate(2891%) hue-rotate(186deg) brightness(93%) contrast(89%); /* Mengubah ikon putih menjadi biru tema */
         }
 
         .social-icon:hover {
             transform: scale(1.15);
+            filter: invert(10%) sepia(21%) saturate(2891%) hue-rotate(186deg) brightness(93%) contrast(89%);
         }
-
+        
         .footer-copyright {
             font-size: 0.75rem;
             font-weight: 500;
-            color: var(--text-secondary);
+            color: var(--text-dark);
         }
 
     </style>
 </head>
 <body>
     <div class="content">
-        <img src="https://raw.githubusercontent.com/hantupota/Omagna-Ink-landing-page/refs/heads/main/image/omagnaink-logo2025-transparant.webp" alt="Omagna Ink Logo" class="logo">
+        <!-- Partikel Logo: Dikunci pada posisi dan keadaan yang tepat -->
+        <img src="https://raw.githubusercontent.com/hantupota/OMAGNA-INK-SIHANOUKVILLE/refs/heads/main/OMAGNALP/LOGO%20FULL%20COLOR.png" alt="Omagna Ink Logo" class="logo">
 
+        <!-- Partikel Teks Header: Dikunci -->
         <div class="title-wrapper">
             <p class="subtitle">WELCOME TO</p>
             <h1 class="title">OMAGNA INK SIHANOUKVILLE</h1>
         </div>
 
+        <!-- Kontainer Partikel Tombol: Semua partikel di dalamnya telah dikalibrasi ulang -->
         <div class="button-container">
             <a href="https://t.me/omagnainkgallery" class="button-link" target="_blank">
-                <img src="https://raw.githubusercontent.com/hantupota/OMAGNA-INK-SIHANOUKVILLE/refs/heads/main/OMAGNALP/ICONS/tele%20white.png" class="button-icon" alt="Telegram Icon">
+                <img src="https://raw.githubusercontent.com/hantupota/OMAGNA-INK-SIHANOUKVILLE/refs/heads/main/OMAGNALP/ICONS/tele.png" class="button-icon" alt="Telegram Icon">
                 <span>KOMUNITAS TELEGRAM OMAGNA</span>
             </a>
             <a href="https://t.me/OmagnainkKPS" class="button-link" target="_blank">
-                <img src="https://raw.githubusercontent.com/hantupota/OMAGNA-INK-SIHANOUKVILLE/refs/heads/main/OMAGNALP/ICONS/tele%20white.png" class="button-icon" alt="Telegram Icon">
+                <img src="https://raw.githubusercontent.com/hantupota/OMAGNA-INK-SIHANOUKVILLE/refs/heads/main/OMAGNALP/ICONS/tele.png" class="button-icon" alt="Telegram Icon">
                 <span>TELEGRAM OFFICIAL OMAGNA KPS</span>
             </a>
             <a href="https://wa.me/85592376291" class="button-link" target="_blank">
-                <img src="https://raw.githubusercontent.com/hantupota/OMAGNA-INK-SIHANOUKVILLE/refs/heads/main/OMAGNALP/ICONS/wa%20white.png" class="button-icon" alt="WhatsApp Icon">
+                <img src="https://raw.githubusercontent.com/hantupota/OMAGNA-INK-SIHANOUKVILLE/refs/heads/main/OMAGNALP/ICONS/wa.png" class="button-icon" alt="WhatsApp Icon">
                 <span>WHATSAPP OFFICIAL OMAGNA KPS</span>
             </a>
             <a href="https://www.omagna.ink" class="button-link" target="_blank">
-                <img src="https://raw.githubusercontent.com/hantupota/OMAGNA-INK-SIHANOUKVILLE/refs/heads/main/OMAGNALP/ICONS/web%20white.png" class="button-icon" alt="Website Icon">
+                <img src="https://raw.githubusercontent.com/hantupota/OMAGNA-INK-SIHANOUKVILLE/refs/heads/main/OMAGNALP/ICONS/web.png" class="button-icon" alt="Website Icon">
                 <span>WEBSITE OFFICIAL OMAGNA</span>
             </a>
             <a href="https://www.facebook.com/omagnainkstudio/" class="button-link" target="_blank">
-                <img src="https://raw.githubusercontent.com/hantupota/OMAGNA-INK-SIHANOUKVILLE/refs/heads/main/OMAGNALP/ICONS/fb%20white.png" class="button-icon" alt="Facebook Icon">
+                <img src="https://raw.githubusercontent.com/hantupota/OMAGNA-INK-SIHANOUKVILLE/refs/heads/main/OMAGNALP/ICONS/fb.png" class="button-icon" alt="Facebook Icon">
                 <span>FACEBOOK OFFICIAL OMAGNA</span>
             </a>
             <a href="https://maps.app.goo.gl/X3QNBRPypLovY6xF9?g_st=ipc" class="button-link outline" target="_blank">
@@ -195,23 +208,23 @@
         </div>
     </div>
 
+    <!-- Partikel Footer: Dikunci -->
     <div class="bottom-nav">
         <div class="social-links">
             <a href="https://www.instagram.com/omagna.ink?igsh=anFpZTY2NXk0ejc4&utm_source=qr" target="_blank">
-                <img src="https://raw.githubusercontent.com/hantupota/OMAGNA-INK-SIHANOUKVILLE/refs/heads/main/OMAGNALP/ICONS/IG%20white.png" class="social-icon" alt="Instagram">
+                <img src="https://raw.githubusercontent.com/hantupota/OMAGNA-INK-SIHANOUKVILLE/refs/heads/main/OMAGNALP/footer/IG%20white.png" class="social-icon" alt="Instagram">
             </a>
             <a href="https://www.tiktok.com/@omagna.ink.kps?_t=ZS-8zfSXyoIz7V&_r=1" target="_blank">
-                <img src="https://raw.githubusercontent.com/hantupota/OMAGNA-INK-SIHANOUKVILLE/refs/heads/main/OMAGNALP/ICONS/tiktok%20white.png" class="social-icon" alt="TikTok">
+                <img src="https://raw.githubusercontent.com/hantupota/OMAGNA-INK-SIHANOUKVILLE/refs/heads/main/OMAGNALP/footer/tiktok%20white.png" class="social-icon" alt="TikTok">
             </a>
             <a href="https://www.youtube.com/@omagnaink" target="_blank">
-                <img src="https://raw.githubusercontent.com/hantupota/OMAGNA-INK-SIHANOUKVILLE/refs/heads/main/OMAGNALP/ICONS/youtube.png" class="social-icon" alt="YouTube">
+                <img src="https://raw.githubusercontent.com/hantupota/OMAGNA-INK-SIHANOUKVILLE/refs/heads/main/OMAGNALP/footer/youtube.png" class="social-icon" alt="YouTube">
             </a>
         </div>
         <div class="footer-copyright">
-            © 2025 OMAGNA SIHANOUKVILLE
+             © 2025 OMAGNA SIHANOUKVILLE
         </div>
     </div>
 </body>
 </html>
-
 
