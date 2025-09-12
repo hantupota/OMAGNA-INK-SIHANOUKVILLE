@@ -41,7 +41,6 @@
       display: flex;
       align-items: flex-start;
       justify-content: center;
-      /* REVISI: Padding atas diatur menjadi 0 untuk posisi paling atas */
       padding: 0 16px 40px;
       min-height: 100vh;
       position: relative;
@@ -83,20 +82,18 @@
       max-width: var(--safe-max);
       margin: 0 auto;
       text-align: center;
-      /* REVISI: Padding atas ditambahkan agar konten tidak menempel ke tepi */
-      padding-top: 10px;
+      padding-top: 0;
     }
 
     /* Logo */
     .logo {
-      /* REVISI: Margin disesuaikan untuk posisi yang lebih tinggi dan bersih. */
       margin-top: 0;
-      margin-bottom: 25px;
+      /* REVISI: Mengurangi margin-bottom agar lebih rapat dengan teks sambutan */
+      margin-bottom: 8px;
       filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
     }
 
     .logo img {
-      /* REVISI FINAL: Ukuran logo dimaksimalkan untuk dampak visual terkuat. */
       width: 380px;
       max-width: 90%;
       height: auto;
@@ -115,16 +112,16 @@
       color: #5a5a5a;
       letter-spacing: 1.5px;
       margin-bottom: 5px;
-      font-weight: 600; /* Tetap 600 sesuai permintaan */
+      font-weight: 600;
       text-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
     }
 
     /* REVISI: Gaya untuk Judul Utama */
     .title {
-      font-size: 30px; /* Ukuran dasar 30px */
+      font-size: 30px;
       font-weight: 800;
       color: #0b0b0b;
-      letter-spacing: 2px; /* Disesuaikan dengan rentang 1.6-2px */
+      letter-spacing: 2px;
       text-transform: uppercase;
       margin-bottom: 30px;
       line-height: 1.2;
@@ -181,8 +178,8 @@
     }
 
     .icon-circle img {
-      width: 90px; /* REVISI: Ukuran ikon diperbesar lagi agar proporsional */
-      height: 90px; /* REVISI: Ukuran ikon diperbesar lagi agar proporsional */
+      width: 90px;
+      height: 90px;
       object-fit: contain;
       filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.1));
     }
@@ -260,7 +257,7 @@
       padding: 0 16px;
       font-size: 14px;
       transition: all 0.3s ease;
-      text-decoration: none; /* Menambahkan ini untuk konsistensi */
+      text-decoration: none;
     }
 
     .loc:hover {
@@ -269,8 +266,8 @@
     }
 
     .loc img {
-      width: 55px; /* REVISI: Ukuran ikon lokasi diperbesar lagi */
-      height: 55px; /* REVISI: Ukuran ikon lokasi diperbesar lagi */
+      width: 55px;
+      height: 55px;
       filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.1));
     }
 
@@ -287,7 +284,6 @@
     }
 
     .social {
-      /* REVISI: Ukuran wadah ikon diperbesar lagi */
       width: 70px;
       height: 70px;
       border-radius: 50%;
@@ -307,7 +303,6 @@
     }
 
     .social img {
-      /* REVISI: Ukuran ikon di dalamnya diperbesar agar proporsional */
       width: 45px;
       height: 45px;
       filter: brightness(0) invert(1) drop-shadow(0 1px 2px rgba(0, 0, 0, 0.2));
@@ -342,14 +337,14 @@
       .btns { gap: 14px; }
       .right { font-size: 13px; padding-left: 20px; padding-right: 15px; }
       .loc { font-size: 13px; height: 46px; padding: 0 14px; }
-      .loc img { width: 40px; height: 40px; } /* REVISI: Ukuran responsif ikon lokasi */
+      .loc img { width: 40px; height: 40px; }
       footer { margin-top: 25px; }
       .footer-socials { gap: 14px; }
       .social { width: 60px; height: 60px; }
       .social img { width: 35px; height: 35px; }
       .copyright-img { width: 200px; }
-      .icon-circle { width: 95px; height: 95px; } /* REVISI: Ukuran responsif */
-      .icon-circle img { width: 65px; height: 65px; } /* REVISI: Ukuran responsif */
+      .icon-circle { width: 95px; height: 95px; }
+      .icon-circle img { width: 65px; height: 65px; }
       .left { width: 110px; min-width: 110px; }
       .right::before { left: -36px; width: 54px; }
     }
@@ -362,14 +357,14 @@
       .btns { gap: 12px; }
       .right { font-size: 12px; padding-left: 18px; padding-right: 12px; }
       .loc { font-size: 12px; height: 42px; padding: 0 12px; }
-      .loc img { width: 35px; height: 35px; } /* REVISI: Ukuran responsif ikon lokasi */
+      .loc img { width: 35px; height: 35px; }
       footer { margin-top: 20px; }
       .footer-socials { gap: 12px; }
       .social { width: 55px; height: 55px; border-width: 2px; }
       .social img { width: 30px; height: 30px; }
       .copyright-img { width: 180px; }
-      .icon-circle { width: 85px; height: 85px; } /* REVISI: Ukuran responsif */
-      .icon-circle img { width: 55px; height: 55px; } /* REVISI: Ukuran responsif */
+      .icon-circle { width: 85px; height: 85px; }
+      .icon-circle img { width: 55px; height: 55px; }
       .left { width: 100px; min-width: 100px; }
       .right::before { left: -32px; width: 48px; }
     }
@@ -381,7 +376,6 @@
 
   <main class="wrap" role="main">
     <div class="logo">
-      <!-- REVISI: Menambahkan atribut width, height, dan loading untuk performa optimal. -->
       <img src="https://raw.githubusercontent.com/hantupota/OMAGNA-INK-SIHANOUKVILLE/refs/heads/main/OMAGNALP/LOGO%20FULL%20COLOR.png" 
            alt="OMAGNA.INK logo"
            width="380" height="159" loading="eager"
@@ -440,9 +434,5 @@
     </footer>
   </main>
 
-  <!-- REVISI: Blok script ini tidak lagi diperlukan karena fungsinya telah digantikan
-       oleh solusi CSS yang lebih modern dan efisien (:focus-visible dan overscroll-behavior).
-       Menghapusnya membuat kode lebih bersih.
-  -->
 </body>
 </html>
