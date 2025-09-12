@@ -2,48 +2,55 @@
 <html lang="id">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>YESOMAGNA INK SIHANOUKVILLE - Landing</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GGOMAGNA INK SHANOUKVILLE</title>
 
-  <!-- Montserrat -->
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Google Fonts: Montserrat -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 
   <style>
     :root {
       --omagna-blue: #0d2c54; /* primary navy */
       --omagna-blue-dark: #0b2644; /* darker tone */
-      --omagna-gold: #d4af37; /* gold accent */
       --bg-color: #f6f7f8;
-      --btn-height: 75px;
-      --btn-radius: 12px;
-      --left-width: 120px;
-      --icon-circle: 70px;
+      --btn-height: 70px;
+      --btn-radius: 16px;
+      --left-width: 100px;
+      --icon-circle: 85px; /* REVISI: Ukuran lingkaran ikon diperbesar */
       --safe-max: 520px;
     }
-    
+
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
     }
-    
-    html, body {
-      height: 100%;
-      font-family: 'Montserrat', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
-    }
-    
+
+    html,
     body {
+      height: 100%;
+    }
+
+    body {
+      font-family: 'Montserrat', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
       background-color: var(--bg-color);
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
       display: flex;
-      align-items: center;
+      /* REVISI: Mengembalikan hukum fisika 'flex-start' untuk mencegah logo terpotong. */
+      align-items: flex-start;
       justify-content: center;
-      padding: 15px 16px 20px;
+      /* REVISI FINAL: Padding atas diminimalkan untuk posisi logo paling tinggi. */
+      padding: 10px 16px 40px;
+      min-height: 100vh;
       position: relative;
+      /* PENYEMPURNAAN: Menggunakan CSS untuk stabilitas scroll, lebih efisien daripada JS. */
+      overscroll-behavior: contain;
     }
 
-    /* Background layer */
+    /* Lapisan Latar Belakang */
     .bg-layer {
       position: fixed;
       top: 0;
@@ -58,7 +65,7 @@
       pointer-events: none;
     }
 
-    /* Gradient overlay */
+    /* Overlay Gradien */
     .gradient-overlay {
       position: fixed;
       top: 0;
@@ -66,11 +73,11 @@
       width: 100%;
       height: 100%;
       z-index: 1;
-      background: linear-gradient(to bottom, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0.2) 40%, rgba(255,255,255,0.1) 100%);
+      background: linear-gradient(to bottom, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0.2) 40%, rgba(255, 255, 255, 0.1) 100%);
       pointer-events: none;
     }
 
-    /* Main wrapper for content */
+    /* Pembungkus Konten Utama */
     .wrap {
       position: relative;
       z-index: 10;
@@ -78,55 +85,53 @@
       max-width: var(--safe-max);
       margin: 0 auto;
       text-align: center;
-      padding-top: 10px;
-    }
-
-    /* Teks penyambutan - Diperbarui sesuai permintaan */
-    .welcome-sm {
-      font-size: 13px; /* Ukuran sekitar 13px */
-      color: #5a5a5a; /* Warna #5a5a5a */
-      letter-spacing: 1.2px;
-      margin-bottom: 8px;
-      font-weight: 500; /* Weight 400/600 - menggunakan 500 */
-      font-family: 'Montserrat', sans-serif;
-      text-transform: uppercase;
     }
 
     /* Logo */
     .logo {
-      margin-bottom: 15px;
-      filter: drop-shadow(0 4px 10px rgba(0,0,0,0.15));
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    
-    .logo img {
-      width: 280px;
-      max-width: 85%;
-      height: auto;
-      display: block;
-      transition: all 0.3s ease;
-    }
-    
-    .logo img:hover {
-      transform: scale(1.02);
-      filter: drop-shadow(0 6px 15px rgba(0,0,0,0.2));
+      /* REVISI: Margin disesuaikan untuk posisi yang lebih tinggi dan bersih. */
+      margin-top: 0;
+      margin-bottom: 25px;
+      filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
     }
 
-    /* Judul utama - Diperbarui sesuai permintaan */
+    .logo img {
+      /* REVISI FINAL: Ukuran logo dimaksimalkan untuk dampak visual terkuat. */
+      width: 380px;
+      max-width: 90%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+      transition: transform 0.3s ease;
+    }
+
+    .logo img:hover {
+      transform: scale(1.02);
+    }
+
+    /* REVISI: Gaya untuk Teks Penyambutan */
+    .welcome-sm {
+      font-size: 13px;
+      color: #5a5a5a;
+      letter-spacing: 1.5px;
+      margin-bottom: 5px;
+      font-weight: 600; /* Tetap 600 sesuai permintaan */
+      text-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    }
+
+    /* REVISI: Gaya untuk Judul Utama */
     .title {
-      font-size: 28px; /* Ukuran 28px untuk desktop */
+      font-size: 30px; /* Ukuran dasar 30px */
       font-weight: 800;
       color: #0b0b0b;
-      letter-spacing: 1.8px; /* Letter-spacing sekitar 1.8px */
+      letter-spacing: 2px; /* Disesuaikan dengan rentang 1.6-2px */
       text-transform: uppercase;
       margin-bottom: 30px;
       line-height: 1.2;
-      font-family: 'Montserrat', sans-serif;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     }
 
-    /* Buttons container */
+    /* Kontainer Tombol */
     .btns {
       display: flex;
       flex-direction: column;
@@ -135,7 +140,7 @@
       padding: 0 10px;
     }
 
-    /* Generic link style (reset) */
+    /* Gaya tautan generik */
     a.link {
       display: flex;
       align-items: stretch;
@@ -144,16 +149,14 @@
       position: relative;
       text-decoration: none;
       min-width: 100%;
-      transition: all 0.3s ease;
-      font-family: 'Montserrat', sans-serif;
-      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+      transition: transform 120ms ease;
     }
 
-    /* Neumorphic left capsule */
+    /* Kapsul kiri */
     .left {
       width: var(--left-width);
       min-width: var(--left-width);
-      background: linear-gradient(135deg, #ffffff, #f0f2f5);
+      background: linear-gradient(180deg, #ffffff, #f0f2f5);
       border-top-left-radius: var(--btn-radius);
       border-bottom-left-radius: var(--btn-radius);
       display: flex;
@@ -161,139 +164,85 @@
       justify-content: center;
       position: relative;
       z-index: 3;
-      box-shadow: 
-        5px 5px 10px rgba(6, 34, 66, 0.1),
-        -5px -5px 10px rgba(255, 255, 255, 0.8),
-        inset 1px 1px 2px rgba(255, 255, 255, 0.8),
-        inset -1px -1px 2px rgba(6, 34, 66, 0.1);
-      overflow: hidden;
+      box-shadow: 8px 10px 18px rgba(6, 34, 66, 0.06), -4px -4px 10px rgba(255, 255, 255, 0.9);
     }
 
-    /* inset circle for icon */
+    /* Lingkaran ikon */
     .icon-circle {
       width: var(--icon-circle);
       height: var(--icon-circle);
       border-radius: 50%;
-      background: linear-gradient(135deg, #f8fafc, #eef3f7);
+      background: linear-gradient(180deg, #f8fafc, #eef3f7);
       display: flex;
       align-items: center;
       justify-content: center;
-      box-shadow: 
-        3px 3px 6px rgba(6, 34, 66, 0.1),
-        -3px -3px 6px rgba(255, 255, 255, 0.8),
-        inset 2px 2px 4px rgba(255, 255, 255, 0.9),
-        inset -2px -2px 4px rgba(6, 34, 66, 0.1);
+      box-shadow: inset 3px 4px 8px rgba(6, 34, 66, 0.08), inset -4px -4px 10px rgba(255, 255, 255, 0.95);
       transition: all 0.3s ease;
-      position: relative;
     }
-    
-    .icon-circle::after {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      border-radius: 50%;
-      background: linear-gradient(135deg, rgba(255,255,255,0.4), rgba(255,255,255,0.1));
-      pointer-events: none;
-    }
-    
+
     .icon-circle img {
-      width: 38px;
-      height: 38px;
+      width: 55px; /* REVISI: Ukuran ikon diperbesar agar proporsional */
+      height: 55px; /* REVISI: Ukuran ikon diperbesar agar proporsional */
       object-fit: contain;
-      filter: drop-shadow(0 1px 2px rgba(0,0,0,0.2));
-      z-index: 2;
-      position: relative;
+      filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.1));
     }
-    
+
     a.link:hover .icon-circle {
-      box-shadow: 
-        4px 4px 8px rgba(6, 34, 66, 0.15),
-        -4px -4px 8px rgba(255, 255, 255, 0.9),
-        inset 2px 2px 4px rgba(255, 255, 255, 0.9),
-        inset -2px -2px 4px rgba(6, 34, 66, 0.15);
+      box-shadow: inset 3px 4px 8px rgba(6, 34, 66, 0.12), inset -4px -4px 10px rgba(255, 255, 255, 0.95);
       transform: scale(1.05);
     }
 
-    /* Dark CTA panel */
+    /* Panel CTA kanan */
     .right {
       flex: 1;
-      background: linear-gradient(135deg, var(--omagna-blue), var(--omagna-blue-dark));
+      background: linear-gradient(180deg, var(--omagna-blue), var(--omagna-blue-dark));
       border-top-right-radius: var(--btn-radius);
       border-bottom-right-radius: var(--btn-radius);
       display: flex;
       align-items: center;
       padding-left: 25px;
-      padding-right: 20px;
+      padding-right: 18px;
       position: relative;
       color: #fff;
       font-weight: 700;
-      letter-spacing: 0.5px;
+      letter-spacing: 1px;
       text-transform: uppercase;
-      font-size: 14px;
+      font-size: 15px;
       z-index: 2;
-      box-shadow: 
-        4px 4px 8px rgba(6, 34, 66, 0.2),
-        inset 1px 1px 1px rgba(255, 255, 255, 0.2);
-      overflow: hidden;
-      transition: all 0.3s ease;
+      box-shadow: 0 6px 0 rgba(6, 34, 66, 0.44);
     }
-    
+
+    .right span {
+      z-index: 6;
+      text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Diagonal wedge */
     .right::before {
       content: '';
       position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255,255,255,0.05));
-      pointer-events: none;
-    }
-    
-    .right span {
-      z-index: 6;
-      text-shadow: 0 1px 2px rgba(0,0,0,0.3);
-      font-family: 'Montserrat', sans-serif;
-    }
-
-    /* Diagonal wedge pseudo element */
-    .right::after {
-      content: '';
-      position: absolute;
-      left: -30px;
+      left: -40px;
       top: 0;
       height: 100%;
       width: 60px;
-      background: linear-gradient(135deg, var(--omagna-blue), var(--omagna-blue-dark));
-      transform: skewX(-20deg);
+      background: linear-gradient(180deg, var(--omagna-blue), var(--omagna-blue-dark));
+      transform: skewX(-22deg);
       z-index: 4;
-      border-top-left-radius: 4px;
-      border-bottom-left-radius: 4px;
-      box-shadow: 
-        4px 0 8px rgba(6, 34, 66, 0.2),
-        inset 1px 0 1px rgba(255, 255, 255, 0.2);
+      border-top-left-radius: 6px;
+      border-bottom-left-radius: 6px;
     }
 
-    /* Hover/active interactions */
-    a.link:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
-    }
-    
+    /* Interaksi Hover/Active */
     a.link:active {
-      transform: translateY(1px);
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    }
-    
-    a.link:hover .right {
-      box-shadow: 
-        4px 4px 10px rgba(6, 34, 66, 0.25),
-        inset 1px 1px 1px rgba(255, 255, 255, 0.2);
+      transform: translateY(2px)
     }
 
-    /* Location pill (white) */
+    a.link:hover .right {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 0 rgba(6, 34, 66, 0.18)
+    }
+
+    /* Tombol Lokasi */
     .loc {
       display: flex;
       align-items: center;
@@ -301,348 +250,199 @@
       gap: 12px;
       height: 50px;
       border-radius: 25px;
-      background: linear-gradient(135deg, #ffffff, #f5f7f9);
+      background: #fff;
       color: var(--omagna-blue);
       font-weight: 700;
-      letter-spacing: 0.5px;
-      box-shadow: 
-        5px 5px 10px rgba(6, 34, 66, 0.1),
-        -5px -5px 10px rgba(255, 255, 255, 0.8),
-        inset 1px 1px 2px rgba(255, 255, 255, 0.8),
-        inset -1px -1px 2px rgba(6, 34, 66, 0.1);
+      letter-spacing: 1.5px;
+      box-shadow: 8px 10px 20px rgba(6, 34, 66, 0.06), -4px -4px 10px rgba(255, 255, 255, 0.9);
       text-transform: uppercase;
       margin-top: 10px;
-      padding: 0 20px;
+      padding: 0 16px;
       font-size: 14px;
       transition: all 0.3s ease;
-      font-family: 'Montserrat', sans-serif;
-    }
-    
-    .loc:hover {
-      transform: translateY(-2px);
-      box-shadow: 
-        6px 6px 12px rgba(6, 34, 66, 0.15),
-        -6px -6px 12px rgba(255, 255, 255, 0.9),
-        inset 1px 1px 2px rgba(255, 255, 255, 0.9),
-        inset -1px -1px 2px rgba(6, 34, 66, 0.15);
-    }
-    
-    .loc img {
-      width: 22px;
-      height: 22px;
-      filter: drop-shadow(0 1px 2px rgba(0,0,0,0.1));
+      text-decoration: none; /* Menambahkan ini untuk konsistensi */
     }
 
-    /* Footer social icons - Diperbesar sesuai permintaan */
-    .footer {
+    .loc:hover {
+      transform: translateY(-2px);
+      box-shadow: 10px 12px 22px rgba(6, 34, 66, 0.08), -4px -4px 10px rgba(255, 255, 255, 0.9);
+    }
+
+    .loc img {
+      width: 24px;
+      height: 24px;
+      filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.1));
+    }
+
+    /* Footer */
+    footer {
+      margin-top: 30px;
+    }
+
+    .footer-socials {
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 16px; /* Sedikit diperlebar */
-      margin-top: 25px;
+      gap: 16px;
     }
-    
+
     .social {
-      width: 52px; /* Diperbesar dari 44px */
-      height: 52px;
+      /* REVISI: Ukuran wadah ikon diperbesar lagi */
+      width: 70px;
+      height: 70px;
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
-      background: linear-gradient(135deg, var(--omagna-blue), var(--omagna-blue-dark));
-      border: 2px solid #ffffff;
-      box-shadow: 
-        3px 3px 6px rgba(6, 34, 66, 0.2),
-        -1px -1px 4px rgba(255, 255, 255, 0.5);
+      background: var(--omagna-blue);
+      border: 3px solid #ffffff;
+      box-shadow: 0 6px 16px rgba(6, 34, 66, 0.15);
       transition: all 0.3s ease;
-      position: relative;
-      overflow: hidden;
     }
-    
-    .social::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255,255,255,0.05));
-      pointer-events: none;
-    }
-    
+
     .social:hover {
-      transform: translateY(-3px) scale(1.08);
-      box-shadow: 
-        4px 4px 8px rgba(6, 34, 66, 0.25),
-        -2px -2px 6px rgba(255, 255, 255, 0.6);
-      background: linear-gradient(135deg, var(--omagna-blue-dark), var(--omagna-blue));
+      transform: translateY(-4px) scale(1.1);
+      box-shadow: 0 10px 20px rgba(6, 34, 66, 0.2);
+      background: var(--omagna-blue-dark);
     }
-    
+
     .social img {
-      width: 28px; /* Diperbesar dari 22px */
-      height: 28px;
-      filter: brightness(0) invert(1) drop-shadow(0 1px 2px rgba(0,0,0,0.3));
-      z-index: 2;
-      position: relative;
+      /* REVISI: Ukuran ikon di dalamnya diperbesar agar proporsional */
+      width: 45px;
+      height: 45px;
+      filter: brightness(0) invert(1) drop-shadow(0 1px 2px rgba(0, 0, 0, 0.2));
     }
 
     .copyright-img {
       margin-top: 20px;
-      width: 220px;
+      width: 240px;
       display: block;
       margin-left: auto;
       margin-right: auto;
       opacity: 0.95;
-      filter: drop-shadow(0 1px 2px rgba(0,0,0,0.1));
+      filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.1));
     }
 
-    /* Accessibility focus ring */
-    a:focus {
-      outline: none;
-      box-shadow: 0 0 0 4px rgba(13, 44, 84, 0.2);
-      border-radius: 12px;
+    /* Aksesibilitas Fokus */
+    a:focus-visible {
+      outline: 3px solid rgba(13, 44, 84, 0.4);
+      outline-offset: 4px;
+      border-radius: 16px;
+    }
+    .loc:focus-visible, .social:focus-visible {
+      border-radius: 9999px;
     }
 
-    /* Responsive tweaks */
+    /* Penyesuaian Responsif */
     @media (max-width: 600px) {
-      body {
-        padding: 10px 12px 15px;
-      }
-      
-      .wrap {
-        padding-top: 5px;
-      }
-      
-      .welcome-sm {
-        font-size: 12px; /* Sedikit lebih kecil di mobile */
-        margin-bottom: 6px;
-      }
-      
-      .logo img {
-        width: 200px;
-      }
-      
-      .title {
-        font-size: 24px; /* 26px untuk tablet */
-        letter-spacing: 1.6px;
-        margin-bottom: 25px;
-      }
-      
-      .btns {
-        gap: 14px;
-      }
-      
-      .right {
-        font-size: 13px;
-        padding-left: 20px;
-        padding-right: 15px;
-      }
-      
-      .loc {
-        font-size: 13px;
-        height: 46px;
-        padding: 0 16px;
-      }
-      
-      .loc img {
-        width: 20px;
-        height: 20px;
-      }
-      
-      .footer {
-        gap: 14px;
-        margin-top: 20px;
-      }
-      
-      .social {
-        width: 48px; /* Diperbesar untuk mobile */
-        height: 48px;
-      }
-      
-      .social img {
-        width: 26px; /* Diperbesar untuk mobile */
-        height: 26px;
-      }
-      
-      .copyright-img {
-        width: 180px;
-        margin-top: 15px;
-      }
-      
-      .icon-circle {
-        width: 62px;
-        height: 62px;
-      }
-      
-      .icon-circle img {
-        width: 34px;
-        height: 34px;
-      }
-      
-      .left {
-        width: 100px;
-        min-width: 100px;
-      }
-      
-      .right::after {
-        left: -25px;
-        width: 50px;
-      }
+      .logo img { width: 320px; }
+      .logo { margin-bottom: 20px; }
+      .welcome-sm { font-size: 16px; }
+      .title { font-size: 26px; margin-bottom: 25px; }
+      .btns { gap: 14px; }
+      .right { font-size: 13px; padding-left: 20px; padding-right: 15px; }
+      .loc { font-size: 13px; height: 46px; padding: 0 14px; }
+      .loc img { width: 22px; height: 22px; }
+      footer { margin-top: 25px; }
+      .footer-socials { gap: 14px; }
+      .social { width: 60px; height: 60px; }
+      .social img { width: 35px; height: 35px; }
+      .copyright-img { width: 200px; }
+      .icon-circle { width: 70px; height: 70px; } /* REVISI: Ukuran responsif */
+      .icon-circle img { width: 45px; height: 45px; } /* REVISI: Ukuran responsif */
+      .left { width: 110px; min-width: 110px; }
+      .right::before { left: -36px; width: 54px; }
     }
 
     @media (max-width: 400px) {
-      .welcome-sm {
-        font-size: 11px;
-        margin-bottom: 5px;
-      }
-      
-      .logo img {
-        width: 180px;
-      }
-      
-      .title {
-        font-size: 22px; /* 26-30px tergantung breakpoint */
-        letter-spacing: 1.6px;
-        margin-bottom: 20px;
-      }
-      
-      .btns {
-        gap: 12px;
-      }
-      
-      .right {
-        font-size: 12px;
-        padding-left: 18px;
-        padding-right: 12px;
-      }
-      
-      .loc {
-        font-size: 12px;
-        height: 42px;
-        padding: 0 14px;
-      }
-      
-      .loc img {
-        width: 18px;
-        height: 18px;
-      }
-      
-      .footer {
-        gap: 12px;
-        margin-top: 18px;
-      }
-      
-      .social {
-        width: 44px; /* Diperbesar untuk mobile kecil */
-        height: 44px;
-      }
-      
-      .social img {
-        width: 24px; /* Diperbesar untuk mobile kecil */
-        height: 24px;
-      }
-      
-      .copyright-img {
-        width: 160px;
-        margin-top: 12px;
-      }
-      
-      .icon-circle {
-        width: 58px;
-        height: 58px;
-      }
-      
-      .icon-circle img {
-        width: 32px;
-        height: 32px;
-      }
-      
-      .left {
-        width: 95px;
-        min-width: 95px;
-      }
-      
-      .right::after {
-        left: -22px;
-        width: 45px;
-      }
+      .logo img { width: 260px; }
+      .logo { margin-bottom: 15px; }
+      .welcome-sm { font-size: 14px; }
+      .title { font-size: 22px; margin-bottom: 20px; }
+      .btns { gap: 12px; }
+      .right { font-size: 12px; padding-left: 18px; padding-right: 12px; }
+      .loc { font-size: 12px; height: 42px; padding: 0 12px; }
+      .loc img { width: 20px; height: 20px; }
+      footer { margin-top: 20px; }
+      .footer-socials { gap: 12px; }
+      .social { width: 55px; height: 55px; border-width: 2px; }
+      .social img { width: 30px; height: 30px; }
+      .copyright-img { width: 180px; }
+      .icon-circle { width: 65px; height: 65px; } /* REVISI: Ukuran responsif */
+      .icon-circle img { width: 40px; height: 40px; } /* REVISI: Ukuran responsif */
+      .left { width: 100px; min-width: 100px; }
+      .right::before { left: -32px; width: 48px; }
     }
   </style>
 </head>
 <body>
-
   <div class="bg-layer" aria-hidden="true"></div>
   <div class="gradient-overlay" aria-hidden="true"></div>
 
   <main class="wrap" role="main">
-    <!-- Header text -->
-    <div class="welcome-sm">WELCOME TO</div>
-
-    <!-- Logo -->
     <div class="logo">
+      <!-- REVISI: Menambahkan atribut width, height, dan loading untuk performa optimal. -->
       <img src="https://raw.githubusercontent.com/hantupota/OMAGNA-INK-SIHANOUKVILLE/refs/heads/main/OMAGNALP/LOGO%20FULL%20COLOR.png" 
            alt="OMAGNA.INK logo"
-           onerror="this.src='https://via.placeholder.com/280x100/0d2c54/ffffff?text=OMAGNA+LOGO'">
+           width="380" height="159" loading="eager"
+           onerror="this.src='https://via.placeholder.com/380x159/0d2c54/ffffff?text=OMAGNA+LOGO'">
     </div>
 
+    <!-- Header text -->
+    <p class="welcome-sm">WELCOME TO</p>
     <h1 class="title">OMAGNA INK SHANOUKVILLE</h1>
 
     <!-- Buttons group -->
     <div class="btns" aria-label="Link buttons">
 
       <a class="link" href="https://t.me/omagnainkgallery?utm_source=tiktok&utm_medium=cpc&utm_campaign=omagna_lp" target="_blank" rel="noopener noreferrer" aria-label="Grup Komunitas Telegram Omagna">
-        <div class="left"><div class="icon-circle"><img src="https://raw.githubusercontent.com/hantupota/OMAGNA-INK-SIHANOUKVILLE/refs/heads/main/OMAGNALP/ICONS/tele.png" alt="telegram icon"></div></div>
+        <div class="left"><div class="icon-circle"><img src="https://raw.githubusercontent.com/hantupota/OMAGNA-INK-SIHANOUKVILLE/refs/heads/main/OMAGNALP/ICONS/tele.png" alt="telegram icon" width="55" height="55" loading="lazy"></div></div>
         <div class="right"><span>KOMUNITAS TELEGRAM OMAGNA</span></div>
       </a>
 
       <a class="link" href="https://t.me/OmagnainkKPS?utm_source=tiktok&utm_medium=cpc&utm_campaign=omagna_lp" target="_blank" rel="noopener noreferrer" aria-label="Telegram Official Omagna KPS">
-        <div class="left"><div class="icon-circle"><img src="https://raw.githubusercontent.com/hantupota/OMAGNA-INK-SIHANOUKVILLE/refs/heads/main/OMAGNALP/ICONS/tele.png" alt="telegram icon"></div></div>
+        <div class="left"><div class="icon-circle"><img src="https://raw.githubusercontent.com/hantupota/OMAGNA-INK-SIHANOUKVILLE/refs/heads/main/OMAGNALP/ICONS/tele.png" alt="telegram icon" width="55" height="55" loading="lazy"></div></div>
         <div class="right"><span>TELEGRAM OFFICIAL OMAGNA KPS</span></div>
       </a>
 
       <a class="link" href="https://wa.me/85592376291?utm_source=tiktok&utm_medium=cpc&utm_campaign=omagna_lp" target="_blank" rel="noopener noreferrer" aria-label="Whatsapp Official Omagna KPS">
-        <div class="left"><div class="icon-circle"><img src="https://raw.githubusercontent.com/hantupota/OMAGNA-INK-SIHANOUKVILLE/refs/heads/main/OMAGNALP/ICONS/wa.png" alt="whatsapp icon"></div></div>
+        <div class="left"><div class="icon-circle"><img src="https://raw.githubusercontent.com/hantupota/OMAGNA-INK-SIHANOUKVILLE/refs/heads/main/OMAGNALP/ICONS/wa.png" alt="whatsapp icon" width="55" height="55" loading="lazy"></div></div>
         <div class="right"><span>WHATSAPP OFFICIAL OMAGNA KPS</span></div>
       </a>
 
       <a class="link" href="https://www.omagna.ink?utm_source=tiktok&utm_medium=cpc&utm_campaign=omagna_lp" target="_blank" rel="noopener noreferrer" aria-label="Website Official Omagna">
-        <div class="left"><div class="icon-circle"><img src="https://raw.githubusercontent.com/hantupota/OMAGNA-INK-SIHANOUKVILLE/refs/heads/main/OMAGNALP/ICONS/web.png" alt="website icon"></div></div>
+        <div class="left"><div class="icon-circle"><img src="https://raw.githubusercontent.com/hantupota/OMAGNA-INK-SIHANOUKVILLE/refs/heads/main/OMAGNALP/ICONS/web.png" alt="website icon" width="55" height="55" loading="lazy"></div></div>
         <div class="right"><span>WEBSITE OFFICIAL OMAGNA</span></div>
       </a>
 
       <a class="link" href="https://www.facebook.com/omagnainkstudio/?utm_source=tiktok&utm_medium=cpc&utm_campaign=omagna_lp" target="_blank" rel="noopener noreferrer" aria-label="Facebook Official Omagna">
-        <div class="left"><div class="icon-circle"><img src="https://raw.githubusercontent.com/hantupota/OMAGNA-INK-SIHANOUKVILLE/refs/heads/main/OMAGNALP/ICONS/fb.png" alt="facebook icon"></div></div>
+        <div class="left"><div class="icon-circle"><img src="https://raw.githubusercontent.com/hantupota/OMAGNA-INK-SIHANOUKVILLE/refs/heads/main/OMAGNALP/ICONS/fb.png" alt="facebook icon" width="55" height="55" loading="lazy"></div></div>
         <div class="right"><span>FACEBOOK OFFICIAL OMAGNA</span></div>
       </a>
 
-      <!-- Location pill (white) -->
-      <a class="loc" href="https://maps.app.goo.gl/X3QNBRPypLovY6xF9?g_st=ipc&utm_source=tiktok&utm_medium=cpc&utm_campaign=omagna_lp" target="_blank" rel="noopener noreferrer" aria-label="Lokasi Omagna Ink KPS">
-        <img src="https://raw.githubusercontent.com/hantupota/OMAGNA-INK-SIHANOUKVILLE/refs/heads/main/OMAGNALP/ICONS/loc2.png" alt="location icon">
-        <div>OMAGNA INK KPS LOCATION</div>
-      </a>
-
     </div>
+    
+    <!-- Location pill (white) -->
+    <a class="loc" href="https://maps.app.goo.gl/X3QNBRPypLovY6xF9?g_st=ipc&utm_source=tiktok&utm_medium=cpc&utm_campaign=omagna_lp" target="_blank" rel="noopener noreferrer" aria-label="Lokasi Omagna Ink KPS">
+      <img src="https://raw.githubusercontent.com/hantupota/OMAGNA-INK-SIHANOUKVILLE/refs/heads/main/OMAGNALP/ICONS/loc2.png" alt="location icon" width="24" height="24" loading="lazy">
+      <div>OMAGNA INK KPS LOCATION</div>
+    </a>
 
-    <!-- Footer + socials - Ikon media sosial yang diperbesar -->
-    <div class="footer" aria-label="Sosial media">
-      <a class="social" href="https://www.instagram.com/omagna.ink?igsh=anFpZTY2NXk0ejc4&utm_source=qr" target="_blank" rel="noopener noreferrer" aria-label="Instagram Omagna"><img src="https://raw.githubusercontent.com/hantupota/OMAGNA-INK-SIHANOUKVILLE/refs/heads/main/OMAGNALP/footer/IG%20white.png" alt="ig"></a>
-      <a class="social" href="https://www.tiktok.com/@omagna.ink.kps?_t=ZS-8zfSXyoIz7V&_r=1" target="_blank" rel="noopener noreferrer" aria-label="TikTok Omagna"><img src="https://raw.githubusercontent.com/hantupota/OMAGNA-INK-SIHANOUKVILLE/refs/heads/main/OMAGNALP/footer/tiktok%20white.png" alt="tiktok"></a>
-      <a class="social" href="https://www.youtube.com/@omagnaink" target="_blank" rel="noopener noreferrer" aria-label="YouTube Omagna"><img src="https://raw.githubusercontent.com/hantupota/OMAGNA-INK-SIHANOUKVILLE/refs/heads/main/OMAGNALP/footer/youtube.png" alt="yt"></a>
-    </div>
+    <!-- Footer + socials -->
+    <footer role="contentinfo">
+      <div class="footer-socials" aria-label="Sosial media">
+        <a class="social" href="https://www.instagram.com/omagna.ink?igsh=anFpZTY2NXk0ejc4&utm_source=qr" target="_blank" rel="noopener noreferrer" aria-label="Instagram Omagna"><img src="https://raw.githubusercontent.com/hantupota/OMAGNA-INK-SIHANOUKVILLE/refs/heads/main/OMAGNALP/footer/IG%20white.png" alt="Instagram" width="45" height="45" loading="lazy"></a>
+        <a class="social" href="https://www.tiktok.com/@omagna.ink.kps?_t=ZS-8zfSXyoIz7V&_r=1" target="_blank" rel="noopener noreferrer" aria-label="TikTok Omagna"><img src="https://raw.githubusercontent.com/hantupota/OMAGNA-INK-SIHANOUKVILLE/refs/heads/main/OMAGNALP/footer/tiktok%20white.png" alt="TikTok" width="45" height="45" loading="lazy"></a>
+        <a class="social" href="https://www.youtube.com/@omagnaink" target="_blank" rel="noopener noreferrer" aria-label="YouTube Omagna"><img src="https://raw.githubusercontent.com/hantupota/OMAGNA-INK-SIHANOUKVILLE/refs/heads/main/OMAGNALP/footer/youtube.png" alt="YouTube" width="45" height="45" loading="lazy"></a>
+      </div>
 
-    <img class="copyright-img" src="https://raw.githubusercontent.com/hantupota/OMAGNA-INK-SIHANOUKVILLE/refs/heads/main/OMAGNALP/footer/%C2%A9%202025%20OMAGNA%20SIHANOUKVILLE.png" alt="copyright">
-
+      <img class="copyright-img" src="https://raw.githubusercontent.com/hantupota/OMAGNA-INK-SIHANOUKVILLE/refs/heads/main/OMAGNALP/footer/%C2%A9%202025%20OMAGNA%20SIHANOUKVILLE.png" alt="Copyright 2025 OMAGNA.INK SHANOUKVILLE" width="240" height="25" loading="lazy">
+    </footer>
   </main>
 
-  <script>
-    // accessibility focus visual
-    document.querySelectorAll('a').forEach(a => {
-      a.addEventListener('focus', () => a.style.boxShadow = '0 0 0 4px rgba(13, 44, 84, 0.2)');
-      a.addEventListener('blur', () => a.style.boxShadow = '');
-    });
-
-    // Prevent scroll bleed on some mobile browsers to keep background placement stable
-    window.addEventListener('touchmove', function(e){}, {passive: true});
-  </script>
+  <!-- REVISI: Blok script ini tidak lagi diperlukan karena fungsinya telah digantikan
+       oleh solusi CSS yang lebih modern dan efisien (:focus-visible dan overscroll-behavior).
+       Menghapusnya membuat kode lebih bersih.
+  -->
 </body>
 </html>
